@@ -1,0 +1,8 @@
+
+@media screen and (min-width: 768px) {
+    .site-main, 
+    .site-footer{
+        width: calc(100% - 50px);
+        margin-left: 50px;
+    }
+}
