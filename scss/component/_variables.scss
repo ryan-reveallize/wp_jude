@@ -1,0 +1,109 @@
+$font-family-base:                      'Open Sans', sans-serif;
+$font-family-bold:                      'Montserrat', sans-serif;
+
+$font-weight-semibold:                  600;
+$font-weight-bold:                      700;
+$font-size-base:                        1rem;
+$line-height-base:                      2;
+$line-height-sm:                        1.5;
+$line-height-lg:                        2.2;
+$fa-font-path:                          "../fonts/webfonts";
+
+$enable-shadows:                        true;
+
+$bg-s-light:                           #F6F9FF;
+
+$white:                                #fff;
+$black:                                #000;
+
+$blue:                                 #0d34ff;
+$red:                                  #FA4F58;
+$primary:                               $blue;
+$primary-light:                        #affbff;
+$secondary:                             $red;
+
+$body-color:                            #646464;
+$heading-color:                            #646464;
+$dark:                                  #292929;
+$text-light-color:                      #969696;
+
+$headings-font-family:                  $font-family-bold;
+$headings-color:                        $dark;
+$h1-font-size:                          $font-size-base * 2.5;      //40
+$h2-font-size:                          $font-size-base * 2;        //32
+$h3-font-size:                          $font-size-base * 1.75;     //28
+$h4-font-size:                          $font-size-base * 1.5;      //24
+$h5-font-size:                          $font-size-base * 1.25;     //20
+$h6-font-size:                          $font-size-base;            //16
+$small-font-size:                       .875rem;                    //14
+$smaller-font-size:                     $font-size-base * 0.75;     //12
+$smallest-font-size:                    $font-size-base * 0.625;    //10
+
+$display-font-sizes: (
+    1: 5rem,            //80
+    2: 4.375rem,          //70
+    3: 3.75rem,           //60
+    4: 3.125rem,          //50
+    5: 2.25rem,           //36
+    6: 1.125rem           //18
+);
+
+$link-decoration:                       none;
+
+$navbar-light-color:                    $body-color;
+$navbar-light-hover-color:              $primary;
+$navbar-light-active-color:             $primary;
+$navbar-nav-link-padding-x:             2rem;
+
+$btn-border-radius:                     0.625rem;                   //10
+$btn-font-size:                         .875em;                     //14
+$btn-font-size-lg:                      $font-size-base * 1.125;    //18
+$btn-font-weight:                       $font-weight-semibold;
+$btn-padding-x:                         2rem;
+$btn-padding-y:                         .875em;
+$btn-padding-y-lg:                      1rem;
+$btn-padding-x-lg:                      3rem;
+$btn-border-radius-lg:                  0.6rem;
+$btn-white-space:                       nowrap;
+
+$accordion-border-color:                transparent;
+$accordion-border-radius:               1rem;
+$accordion-padding-y:                   1rem;
+$accordion-padding-x:                   2.5rem;
+//$accordion-icon-transform:              rotate(0);
+$accordion-button-icon:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$white}'> <path d='M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z'/></svg>");
+
+$accordion-button-active-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$white}'><path d='M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z'/></svg>");
+
+$carousel-control-prev-icon-bg:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$secondary}'><path d='M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z'/></svg>");
+
+$carousel-control-next-icon-bg:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$secondary}'><path d='M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z'/></svg>");
+
+
+//$input-font-size:                       $small-font-size;
+$input-border-width:                    0;
+$input-border-radius:                   0.25rem;
+$input-border-radius-lg:                0.5rem;
+$input-border-color:                    $white;
+$input-padding-x:                       1.25rem;
+$input-padding-y:                       0.641rem;
+$input-padding-x-lg:                    2rem;
+$input-padding-y-lg:                    1rem;
+$input-box-shadow:                      0px 6px 10px rgba(40, 91, 154 , 0.09);
+$input-placeholder-color:               rgba($primary, 0.3);
+$input-plaintext-color:                 $body-color;
+$input-bg:                              $bg-s-light;
+$input-box-shadow:                      0px 2px 4px rgb(40 91 154 / 10%);
+
+
+$input-focus-box-shadow:                0px 2px 4px rgb(40 91 154 / 20%);
+
+$form-label-margin-bottom:              .5rem;
+$form-label-color:                      $body-color;
+
+$form-select-indicator-color:           $primary;
+$form-select-box-shadow:                0px 6px 10px rgba(40, 91, 154 , 0.09), inset 0 0px 0px transparent;
+
+$pagination-border-width:               0;
+
+$box-shadow:                            2px 2px 20px 0 rgb(0 0 0 / 40%);

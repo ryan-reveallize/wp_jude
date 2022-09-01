@@ -1,0 +1,20 @@
+.star{
+    &-0 i:nth-child(-n+0) {
+        color: $yellow
+    }
+    &-1 i:nth-child(-n+1) {
+        color: $yellow
+    }
+    &-2 i:nth-child(-n+2) {
+        color: $yellow
+    }
+    &-3 i:nth-child(-n+3) {
+        color: $yellow
+    }
+    &-4 i:nth-child(-n+4) {
+        color: $yellow
+    }
+    &-5 i {
+        color: $yellow
+    }
+}

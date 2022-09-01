@@ -1,0 +1,157 @@
+// scss-docs-start btn-outline-variant-mixin
+@mixin button-white-variant($color: $primary,
+    $color-hover: $white,
+    $active-background: $primary,
+    $active-border: $primary,
+    $active-color: $white) {
+    color: $color;
+    border-color: $white;
+    background-color: $white;
+
+    &:hover {
+        color: $color-hover;
+        background-color: $active-background;
+        border-color: $active-border;
+    }
+
+    .btn-check:focus+&,
+    &:focus {
+        box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+    }
+
+    .btn-check:checked+&,
+    .btn-check:active+&,
+    &:active,
+    &.active,
+    &.dropdown-toggle.show {
+        color: $active-color;
+        background-color: $active-background;
+        border-color: $active-border;
+
+        &:focus {
+            @if $enable-shadows {
+                @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5));
+            }
+
+            @else {
+                // Avoid using mixin so we can pass custom focus shadow properly
+                box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+            }
+        }
+    }
+
+    &:disabled,
+    &.disabled {
+        color: $color;
+        background-color: transparent;
+    }
+}
+
+@mixin button-outline-white-variant($color: $primary,
+    $color-hover: $primary,
+    $active-background: $white,
+    $active-border: $white,
+    $active-color: $primary) {
+    color: $white;
+    border-color: $white;
+    background-color: transparent;
+
+    &:hover {
+        color: $color-hover;
+        background-color: $active-background;
+        border-color: $active-border;
+    }
+
+    .btn-check:focus+&,
+    &:focus {
+        box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+    }
+
+    .btn-check:checked+&,
+    .btn-check:active+&,
+    &:active,
+    &.active,
+    &.dropdown-toggle.show {
+        color: $active-color;
+        background-color: $active-background;
+        border-color: $active-border;
+
+        &:focus {
+            @if $enable-shadows {
+                @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5));
+            }
+
+            @else {
+                // Avoid using mixin so we can pass custom focus shadow properly
+                box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+            }
+        }
+    }
+
+    &:disabled,
+    &.disabled {
+        color: $color;
+        background-color: transparent;
+    }
+}
+
+// scss-docs-end btn-outline-variant-mixin
+
+%flex-a-center{
+    display: flex;
+    align-items: center;
+}
+
+%flex-j-center{
+    display: flex;
+    justify-content: center;
+}
+
+%flex-a-center-j-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+%flex-a-center-j-between{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+%flex-a-end-j-between{
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+}
+
+%hover-underline{
+    position: relative;
+    &::before {
+        content: '';
+        width: 0;
+        border-bottom: 4px solid transparent;
+        border-radius: 4px;
+        position: absolute;
+        left: 0.5rem;
+        bottom: 0.25rem;
+        transition: width 0.3s ease;
+    }
+
+    &:hover,
+    &:focus {
+        outline: none;
+
+        &::before {
+            width: 60%;
+            border-color: $primary;
+        }
+    }
+}
+
+%radial-grad{
+    background: rgb(253,253,254);
+    background: -moz-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(251,251,253,1) 15%, rgba(255,255,255,1) 30%, rgba(248,248,252,1) 30%, rgba(250,251,255,1) 45%, rgba(244,246,251,1) 45%, rgba(246,248,252,1) 60%, rgba(240,243,250,1) 60%, rgba(220,231,248,1) 90%);
+    background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(251,251,253,1) 15%, rgba(255,255,255,1) 30%, rgba(248,248,252,1) 30%, rgba(250,251,255,1) 45%, rgba(244,246,251,1) 45%, rgba(246,248,252,1) 60%, rgba(240,243,250,1) 60%, rgba(220,231,248,1) 90%);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(251,251,253,1) 15%, rgba(255,255,255,1) 30%, rgba(248,248,252,1) 30%, rgba(250,251,255,1) 45%, rgba(244,246,251,1) 45%, rgba(246,248,252,1) 60%, rgba(240,243,250,1) 60%, rgba(220,231,248,1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#dce7f8",GradientType=1);
+}

@@ -1,0 +1,21 @@
+@import "component/_variables.scss";
+
+@import "bootstrap";
+@import "custom";
+
+@import "component/mixins";
+@import "component/buttons";
+@import "component/typography";
+@import "component/form";
+@import "component/accordion";
+@import "component/animations";
+@import "component/star";
+@import "component/social";
+@import "component/slick";
+
+@import "section/pagination";
+@import "section/navbar";
+@import "section/sections";
+@import "section/blog";
+@import "section/footer";
+@import "section/scott";
