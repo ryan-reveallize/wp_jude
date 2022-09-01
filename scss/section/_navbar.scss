@@ -155,8 +155,19 @@
         .side-menu {
             display: flex;
             margin: 0;
+            .menu-item{
+                padding: 0 1rem;
+            }
+            .menu-item:hover,
+            .current-menu-item {
+                a {
+                    color: $black;
+                    border-top: 2px solid $black;
+                }
+            }
             a {
-                padding: 0.5rem 1rem;
+                padding: 0.5rem 0;
+                border-top: 2px solid transparent;
             }
         }
         .nav-social{
