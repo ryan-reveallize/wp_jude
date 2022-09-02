@@ -1,8 +1,6 @@
-$font-family-base:                      'Open Sans', sans-serif;
+$font-family-base:                      'Athiti', sans-serif;;
 $font-family-bold:                      'Montserrat', sans-serif;
 
-$font-weight-semibold:                  600;
-$font-weight-bold:                      700;
 $font-size-base:                        1rem;
 $line-height-base:                      2;
 $line-height-sm:                        1.5;
@@ -22,13 +20,8 @@ $primary:                               $blue;
 $primary-light:                        #affbff;
 $secondary:                             $red;
 
-$body-color:                            #646464;
-$heading-color:                            #646464;
-$dark:                                  #292929;
-$text-light-color:                      #969696;
+$body-color:                            #1F2227;
 
-$headings-font-family:                  $font-family-bold;
-$headings-color:                        $dark;
 $h1-font-size:                          $font-size-base * 2.5;      //40
 $h2-font-size:                          $font-size-base * 2;        //32
 $h3-font-size:                          $font-size-base * 1.75;     //28
@@ -40,7 +33,7 @@ $smaller-font-size:                     $font-size-base * 0.75;     //12
 $smallest-font-size:                    $font-size-base * 0.625;    //10
 
 $display-font-sizes: (
-    1: 5rem,            //80
+    1: 5rem,              //80
     2: 4.375rem,          //70
     3: 3.75rem,           //60
     4: 3.125rem,          //50
@@ -58,7 +51,6 @@ $navbar-nav-link-padding-x:             2rem;
 $btn-border-radius:                     0.625rem;                   //10
 $btn-font-size:                         .875em;                     //14
 $btn-font-size-lg:                      $font-size-base * 1.125;    //18
-$btn-font-weight:                       $font-weight-semibold;
 $btn-padding-x:                         2rem;
 $btn-padding-y:                         .875em;
 $btn-padding-y-lg:                      1rem;

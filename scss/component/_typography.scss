@@ -1,1 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti&display=swap');
+@font-face {
+    font-family: 'ivy-mode-bold';
+    src: local('Ivy Mode Bold'), local('Ivy-Mode-Bold'),
+        url('fonts/IvyMode-Bold.woff2') format('woff2'),
+        url('fonts/IvyMode-Bold.woff') format('woff'),
+        url('fonts/IvyMode-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ivy-mode-regular';
+    src: local('Ivy Mode Regular'), local('Ivy-Mode-Thin'),
+        url('fonts/IvyMode-Regular.woff2') format('woff2'),
+        url('fonts/IvyMode-Regular.woff') format('woff'),
+        url('fonts/IvyMode-Regular.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ivy-mode-thin';
+    src: local('Ivy Mode Thin'), local('Ivy-Mode-Thin'),
+        url('fonts/IvyMode-Thin.woff2') format('woff2'),
+        url('fonts/IvyMode-Thin.woff') format('woff'),
+        url('fonts/IvyMode-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
