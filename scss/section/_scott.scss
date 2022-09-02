@@ -66,3 +66,33 @@
     font-family: "ivy-mode-bold";
   }
 }
+
+.searchandfilter ul {
+  padding-left: 0;
+}
+
+nav.pagination {
+  justify-content: center;
+  text-align: center;
+  .next.page-numbers {
+    display: none;
+  }
+  .prev.page-numbers {
+    display: none;
+  }
+  & > span {
+    padding: 2rem;
+    background-color: #eae0dc;
+    color: #1f2227;
+  }
+  & > .current {
+    padding: 2rem;
+    background-color: #1f2227;
+    color: #fff;
+  }
+  & > a {
+    padding: 2rem;
+    color: #1f2227;
+    background-color: #eae0dc;
+  }
+}
