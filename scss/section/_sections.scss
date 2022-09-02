@@ -17,15 +17,6 @@
     }
 }
 
-.hero-image {
-    img {
-        width: 250px;
-        height: 350px;
-        object-fit: cover;
-        margin-top: 1rem;
-    }
-}
-
 @media screen and (min-width: 768px) {
 
     .site-main,
@@ -43,12 +34,27 @@
             width: 122%;
         }
 
-        .hero-image-col {
-
-        }
+        .hero-image-col {}
 
         .last-col {
             opacity: 0.2;
+        }
+        .first-col{
+            transform: translateY(-2%);
+        }
+        .animate-hero{
+            .first-col{
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .hero-image {
+        img {
+            width: 250px;
+            height: 350px;
+            object-fit: cover;
+            margin-top: 1rem;
         }
     }
 
@@ -73,5 +79,6 @@
         top: -5px;
         right: -13px;
         max-height: 160px;
+        z-index: 3;
     }
 }
