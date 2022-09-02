@@ -127,8 +127,16 @@ get_header();
             </div>
         </div>
     </div>
-    <section class="position-relative">
+    <section class="our-artist-section">
         <div class="container">
+            <div class="row align-items-md-end">
+                <div class="col-md-6">
+                    <div class="our-artist">
+                        <img src="<?php bloginfo('template_directory') ?>/assets/images/G L Askew II.jpg" alt="Logo Outline" class="logo_outline" />
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
             <div class="artist-lists">
                 <div class="mb-4">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur numquam earum ullam laboriosam obcaecati dolorum reprehenderit tempora, dolorem, adipisci et sunt debitis mollitia quam asperiores impedit unde quos corporis vero!
