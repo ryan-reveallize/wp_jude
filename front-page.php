@@ -32,7 +32,7 @@ get_header();
                                                 <p class="font-ivy mb-0">G L Askew II</p>
                                             </div>
                                             <div class="hero-image-container">
-                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.png" alt="Gallery" class="hero-image" />
+                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.jpg" alt="Gallery" class="hero-image" />
                                                 <p class="font-ivy mb-0">G L Askew II</p>
                                             </div>
                                             <div class="hero-image-container">
@@ -44,7 +44,7 @@ get_header();
                                                 <p class="font-ivy mb-0">G L Askew II</p>
                                             </div>
                                             <div class="hero-image-container">
-                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.png" alt="Gallery" class="hero-image" />
+                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.jpg" alt="Gallery" class="hero-image" />
                                                 <p class="font-ivy mb-0">G L Askew II</p>
                                             </div>
                                             <div class="hero-image-container">
@@ -54,7 +54,7 @@ get_header();
                                         </div>
                                         <div class="col-6 col-sm-4 hero-image-col mid-col">
                                             <div class="hero-image-container">
-                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.png" alt="Gallery" class="hero-image" />
+                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.jpg" alt="Gallery" class="hero-image" />
                                                 <p class="font-ivy mb-0">G L Askew II</p>
                                             </div>
                                             <div class="hero-image-container">
@@ -66,7 +66,7 @@ get_header();
                                                 <p class="font-ivy mb-0">G L Askew II</p>
                                             </div>
                                             <div class="hero-image-container">
-                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.png" alt="Gallery" class="hero-image" />
+                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.jpg" alt="Gallery" class="hero-image" />
                                                 <p class="font-ivy mb-0">G L Askew II</p>
                                             </div>
                                             <div class="hero-image-container">
@@ -88,7 +88,7 @@ get_header();
                                                 <p class="font-ivy mb-0">G L Askew II</p>
                                             </div>
                                             <div class="hero-image-container">
-                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.png" alt="Gallery" class="hero-image" />
+                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.jpg" alt="Gallery" class="hero-image" />
                                                 <p class="font-ivy mb-0">G L Askew II</p>
                                             </div>
                                             <div class="hero-image-container">
@@ -100,7 +100,7 @@ get_header();
                                                 <p class="font-ivy mb-0">G L Askew II</p>
                                             </div>
                                             <div class="hero-image-container">
-                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.png" alt="Gallery" class="hero-image" />
+                                                <img src="<?php bloginfo('template_directory') ?>/assets/images/Aaron Smith.jpg" alt="Gallery" class="hero-image" />
                                                 <p class="font-ivy mb-0">G L Askew II</p>
                                             </div>
                                         </div>
