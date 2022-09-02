@@ -8,12 +8,136 @@
 .hero-section-wrapper {
     position: relative;
     isolation: isolate;
-    min-height: 100vh;
-    height: 100vh;
+    min-height: 105vh;
+    height: 105vh;
 
     .custom-logo-link {
         position: relative;
         z-index: -1;
+    }
+}
+
+.logo-container {
+    margin-top: -3rem;
+
+    .custom-logo-link {
+        display: block;
+        max-width: 15rem;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.logo_outline {
+    position: absolute;
+    top: -2px;
+    right: -6px;
+    max-height: 70px;
+    z-index: 3;
+}
+
+.hero-images-wrapper {
+    position: relative;
+    width: 100%;
+    max-height: 50vh;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 10rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgb(255, 255, 255, 0);
+        background: linear-gradient(180deg, rgba(248,247,244,0) 0%, rgba(248,247,244,1) 100%);
+    }
+
+    .hero-image-col {
+        transition: transform 8s linear;
+    }
+
+    .last-col {
+        opacity: 0.2;
+    }
+
+    .first-col,
+    .last-col {
+        transform: translateY(-2%);
+    }
+
+    .mid-col {
+        transform: translateY(-50%);
+    }
+
+    .animate-hero {
+
+        .first-col,
+        .last-col {
+            transform: translateY(-55%);
+        }
+
+        .mid-col {
+            transform: translateY(-10%);
+        }
+    }
+}
+
+.hero-image-container {
+    margin-bottom: 1rem;
+
+    img {
+        width: 100%;
+        height: 16rem;
+        object-fit: cover;
+        margin-top: 1rem;
+    }
+}
+
+.btn-explore-artist{
+    border: 1px solid $body-color;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: $body-color;
+    box-shadow: 0 2px 0px 0px rgba($body-color, 0.0);
+    transition: all 0.3s ease;
+    &:hover{
+        background-color: $light;
+        border-color: $light;
+        box-shadow: 0 2px 6px -2px rgba($body-color, 0.4);
+    }
+}
+.our-artist-section{
+    position: relative;
+    z-index: 2;
+}
+@media screen and (max-width: 767px) {
+    .logo-container {
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-height: 1024px) {
+    div.hero-section-wrapper {
+        min-height: 70vh;
+        height: 70vh;
+    }
+
+    div.hero-images-wrapper {
+        max-height: 70vh;
+
+        &::after {
+            height: 30vh;
+        }
     }
 }
 
@@ -26,35 +150,15 @@
     }
 
     .hero-images-wrapper {
+        max-height: 100vh;
 
-        width: 100%;
-        overflow-x: hidden;
+        &::after {
+            height: 60vh;
+            background: linear-gradient(180deg, rgba(248,247,244,0) 0%, rgba(248,247,244,0.6) 15%, rgba(248,247,244,1) 100%);
+        }
 
         .hero-images {
             width: 122%;
-        }
-
-        .hero-image-col {}
-
-        .last-col {
-            opacity: 0.2;
-        }
-        .first-col{
-            transform: translateY(-2%);
-        }
-        .animate-hero{
-            .first-col{
-                transform: translateY(-50%);
-            }
-        }
-    }
-
-    .hero-image {
-        img {
-            width: 250px;
-            height: 350px;
-            object-fit: cover;
-            margin-top: 1rem;
         }
     }
 
@@ -62,23 +166,123 @@
         margin-top: 10rem;
 
         .custom-logo-link {
-            display: block;
-            min-width: 540px;
+            min-width: 360px;
             width: 100%;
-
-            img {
-                width: 100%;
-                height: auto;
-            }
         }
-
     }
 
     .logo_outline {
-        position: absolute;
-        top: -5px;
-        right: -13px;
+        top: -4px;
+        right: -10px;
+        max-height: 108px;
+    }
+
+    .btn-explore-artist{
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .hero-section-wrapper {
+        min-height: 150vh;
+        height: 150vh;
+    }
+
+    .hero-images-wrapper {
+        max-height: 200vh;
+
+        &::after {
+            height: 100vh;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .logo-container .custom-logo-link {
+        min-width: 360px;
+    }
+
+    .logo_outline {
+        top: -4px;
+        right: -10px;
+        max-height: 106px;
+    }
+
+    .hero-image-container {
+        img {
+            height: 22rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .logo-container .custom-logo-link {
+        min-width: 420px;
+    }
+
+    .logo_outline {
+        top: -6px;
+        right: -12px;
+        max-height: 126px;
+    }
+
+    .hero-image-container {
+
+        img {
+            width: 75%;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .logo-container .custom-logo-link {
+        min-width: 500px;
+    }
+
+    .logo_outline {
+        top: -8px;
+        right: -14px;
+        max-height: 150px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .logo-container .custom-logo-link {
+        min-width: 540px;
+    }
+
+    .logo_outline {
+        top: -6px;
         max-height: 160px;
-        z-index: 3;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .logo-container .custom-logo-link {
+        min-width: 700px;
+    }
+
+    .logo_outline {
+        right: -20px;
+        max-height: 208px;
+    }
+
+    .hero-image-container {
+        img {
+            height: 30rem;
+        }
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .logo-container .custom-logo-link {
+        min-width: 900px;
+    }
+
+    .logo_outline {
+        right: -26px;
+        max-height: 265px;
     }
 }
