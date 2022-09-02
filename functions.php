@@ -11,7 +11,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
-
+add_image_size( 'artists', 360, 410 ); 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -176,3 +176,63 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Register Custom Post Type
+
+
+
+function clm_custom_post() {
+
+  
+
+	//  dealers
+		register_post_type('Artists', array(
+			
+			'rewrite' => false,
+			'labels' => array(
+				'name' => 'Artists',
+				'singular_name' => 'artists',
+				'add_new_item' => 'Add new',
+				'edit_item' => 'Edit'
+			),
+			'menu_icon' => 'dashicons-text-page',
+			'public' => true,
+			'has_archive' => false,
+			'supports' => array(
+				'title', 'thumbnail', 'editor', 'custom-fields', 'excerpt', 'tags',
+			)
+		));
+	
+	
+		
+	}
+	
+	add_action('init', 'clm_custom_post');
+	
+	
+	function artists_category() {  
+		register_taxonomy(  
+			'artists-category',  					// This is a name of the taxonomy. Make sure it's not a capital letter and no space in between
+			'artists',        			//post type name
+			array(  
+				'hierarchical' => true,  
+				'label' => 'Artists Categories',  	//Display name
+				'query_var' => true,
+				'has_archive' => true,
+				'rewrite' => array('slug' => 'artists-category'),
+				'supports' => array(
+					'title', 'thumbnail', 'editor', 'custom-fields', 'excerpt', 'tags'
+				)
+			)  
+		);  
+	}  
+	add_action( 'init', 'artists_category');
+
+
+	function excerpt($num) {
+		$limit = $num+1;
+		$excerpt = explode(' ', get_the_excerpt(), $limit);
+		array_pop($excerpt);
+		$excerpt = implode(" ",$excerpt)."...";
+		echo $excerpt;
+	}
+	

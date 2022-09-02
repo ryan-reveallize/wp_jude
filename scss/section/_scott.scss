@@ -1,0 +1,68 @@
+@media (min-width: 768px) {
+  .gutters-40 {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  .gutters-40 > .col,
+  .gutters-40 > [class*="col-"] {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.block-wrap .img-wrap {
+  position: relative;
+  .linkwrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    & > div {
+      width: 2rem;
+      height: 3rem;
+      margin: 1rem;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+.height-auto {
+  height: auto;
+}
+
+.gallery-wrap {
+  & > div {
+    &:nth-child(3n - 1) {
+      @media (min-width: 768px) {
+        top: 5rem;
+        position: relative;
+      }
+    }
+  }
+}
+
+.artists-wrap {
+  & > div {
+    &:nth-child(3n - 1) {
+      @media (min-width: 768px) {
+        top: 5rem;
+        position: relative;
+      }
+    }
+  }
+}
+
+.block-wrap {
+  .c-card {
+    min-height: 26rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  h3 {
+    font-family: "ivy-mode-bold";
+  }
+}
