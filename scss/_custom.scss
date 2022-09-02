@@ -1,9 +1,17 @@
+:root{
+    --j-light: #F8F7F4
+}
 .font-ivy{
     font-family: 'ivy-mode-regular';
 }
 .font-ivy-bold{
     font-family: 'ivy-mode-bold';
+    line-height: 1.6;;
 }
 .font-ivy-thin {
     font-family: 'ivy-mode-thin';
+    line-height: 1.6;;
+}
+body{
+    background-color: var(--j-light)
 }

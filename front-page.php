@@ -16,11 +16,11 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main bg-light">
+<main id="primary" class="site-main">
     <div class="hero-section">
         <div class="container-fluid">
             <div class="row justify-content-lg-end">
-                <div class="col-lg-11 hero-section-wrapper">
+                <div class="col-xl-11 hero-section-wrapper">
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="logo-container mb-5">
@@ -28,10 +28,7 @@ get_header();
                                 <img src="<?php bloginfo('template_directory') ?>/assets/logo-outline.png" alt="Logo Outline" class="logo_outline" />
                             </div>
                             <div class="col-lg-10">
-
-                                <h1 class="h3 font-ivy-bold mb-5">
-                                    We support creative artists & give form to vision.
-                                </h1>
+                                <h1 class="h3 font-ivy-bold mb-5">We support creative artists & give form to vision.</h1>
                                 <p>We do not take cues, we follow the guidance of inspiration and instinct. In a time of oversharing, JUDE embraces the understated and unspoken. We embrace anomalies and contradictions and believe in what is true, real, and original.</p>
                             </div>
                         </div>
