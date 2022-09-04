@@ -42,21 +42,28 @@
 					);
 					?>
 					<ul class="nav-social">
-						<li>
-							<a href="#" class="icon-facebook">
-								<?php include get_template_directory() . '/assets/facebook.svg'; ?>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="icon-instagram">
-								<?php include get_template_directory() . '/assets/instagram.svg'; ?>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="icon-paperplane">
-								<?php include get_template_directory() . '/assets/paperplane.svg'; ?>
-							</a>
-						</li>
+						<?php if (get_field('facebook', 'option')) : ?>
+							<li>
+								<a href="<?= the_field('facebook', 'option') ?>" class="icon-facebook">
+									<?php include get_template_directory() . '/assets/facebook.svg'; ?>
+								</a>
+							</li>
+						<?php endif; ?>
+
+						<?php if (get_field('instagram', 'option')) : ?>
+							<li>
+								<a href="<?= the_field('instagram', 'option') ?>" class="icon-instagram">
+									<?php include get_template_directory() . '/assets/instagram.svg'; ?>
+								</a>
+							</li>
+						<?php endif; ?>
+						<?php if (get_field('email', 'option')) : ?>
+							<li>
+								<a href="mailto:<?= the_field('email', 'option') ?>" class="icon-paperplane">
+									<?php include get_template_directory() . '/assets/paperplane.svg'; ?>
+								</a>
+							</li>
+						<?php endif; ?>
 					</ul>
 
 				</div>

@@ -46,14 +46,14 @@ $navbar-light-hover-color:              $primary;
 $navbar-light-active-color:             $primary;
 $navbar-nav-link-padding-x:             2rem;
 
-$btn-border-radius:                     0.625rem;                   //10
+$btn-border-radius:                     0;                   //10
 $btn-font-size:                         .875em;                     //14
 $btn-font-size-lg:                      $font-size-base * 1.125;    //18
 $btn-padding-x:                         2rem;
 $btn-padding-y:                         .875em;
 $btn-padding-y-lg:                      1rem;
 $btn-padding-x-lg:                      3rem;
-$btn-border-radius-lg:                  0.6rem;
+$btn-border-radius-lg:                  0;
 $btn-white-space:                       nowrap;
 
 $accordion-border-color:                transparent;
@@ -91,7 +91,11 @@ $input-focus-box-shadow:                0px 2px 4px rgb(40 91 154 / 20%);
 $form-label-margin-bottom:              .5rem;
 $form-label-color:                      $body-color;
 
-$form-select-indicator-color:           $primary;
+$form-select-padding-y:                 0.875rem;
+$form-select-padding-x:                 1rem;
+$form-select-color:                     $body-color;
+$form-select-bg:                        $white;
+$form-select-border-color:              #EAE0DC;
 $form-select-box-shadow:                0px 6px 10px rgba(40, 91, 154 , 0.09), inset 0 0px 0px transparent;
 
 $pagination-border-width:               0;

@@ -1,0 +1,25 @@
+footer{
+    img{
+        width: 100px;
+        height: auto;
+    }
+    ul{
+        li{            
+            padding-right: 1rem;
+        }
+        a{
+            color: $body-color;
+            font-size: $small-font-size;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+            &:hover,
+            &:focus{
+                color: $dark;
+                border-bottom: 1px solid $body-color;
+            }
+        }
+    }
+    span{
+        font-size: $smaller-font-size;
+    }
+}

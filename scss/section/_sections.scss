@@ -8,8 +8,8 @@
 .hero-section-wrapper {
     position: relative;
     isolation: isolate;
-    min-height: 105vh;
-    height: 105vh;
+    min-height: 115vh;
+    height: 115vh;
 
     .custom-logo-link {
         position: relative;
@@ -53,7 +53,7 @@
         left: 0;
         right: 0;
         background: rgb(255, 255, 255, 0);
-        background: linear-gradient(180deg, rgba(248,247,244,0) 0%, rgba(248,247,244,1) 100%);
+        background: linear-gradient(180deg, rgba(248, 247, 244, 0) 0%, rgba(248, 247, 244, 1) 100%);
     }
 
     .hero-image-col {
@@ -97,7 +97,7 @@
     }
 }
 
-.btn-explore-artist{
+.btn-explore-artist {
     border: 1px solid $body-color;
     border-radius: 50%;
     width: 140px;
@@ -110,16 +110,44 @@
     color: $body-color;
     box-shadow: 0 2px 0px 0px rgba($body-color, 0.0);
     transition: all 0.3s ease;
-    &:hover{
+
+    &:hover {
         background-color: $light;
         border-color: $light;
         box-shadow: 0 2px 6px -2px rgba($body-color, 0.4);
     }
 }
-.our-artist-section{
+
+.our-artist-section {
     position: relative;
     z-index: 2;
 }
+
+.insta-feed {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 20%;
+        background: linear-gradient(90deg, rgba(248, 247, 244, 0) 0%, rgba(248, 247, 244, 1) 100%);
+    }
+}
+
+.insta-item {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 576px) {}
+
 @media screen and (max-width: 767px) {
     .logo-container {
         z-index: 2;
@@ -154,7 +182,7 @@
 
         &::after {
             height: 60vh;
-            background: linear-gradient(180deg, rgba(248,247,244,0) 0%, rgba(248,247,244,0.6) 15%, rgba(248,247,244,1) 100%);
+            background: linear-gradient(180deg, rgba(248, 247, 244, 0) 0%, rgba(248, 247, 244, 0.6) 15%, rgba(248, 247, 244, 1) 100%);
         }
 
         .hero-images {
@@ -177,9 +205,29 @@
         max-height: 108px;
     }
 
-    .btn-explore-artist{
+    .btn-explore-artist {
         margin-left: auto;
         margin-right: 0;
+    }
+
+    .our-artist-section {
+        .our-artist {
+            height: 100%;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .display-1 {
+            position: relative;
+            left: -90%;
+            transform: translateX(50%);
+            width: 106%;
+            text-shadow: 1px 1px 2px $white;
+        }
     }
 }
 
