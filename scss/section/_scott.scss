@@ -96,3 +96,112 @@ nav.pagination {
     background-color: #eae0dc;
   }
 }
+
+.contact-us {
+  .block-wrap {
+    background-color: #ffffff;
+    padding: 1.5rem 3rem;
+    .btn-container {
+      a {
+        @media (max-width: 990px) {
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+  .mid-section {
+    iframe {
+      width: 100%;
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+    .directions-wrap {
+      background: #1f2227;
+      .directions {
+        padding: 0 5rem;
+        ul {
+          padding-left: 0rem;
+          list-style: none;
+        }
+        img {
+          margin-right: 0.5rem;
+        }
+        li {
+          position: relative;
+          margin: 1rem 0;
+        }
+        .location {
+          span {
+            position: relative;
+            left: 2rem;
+            color: #f8f7f4;
+          }
+          &:before {
+            background-image: url(assets/map-pin.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 1.5rem;
+            width: 1.5rem;
+            content: "";
+            display: inline-block;
+            position: absolute;
+          }
+        }
+        .phoneno {
+          a {
+            position: relative;
+            left: 2rem;
+            color: #f8f7f4;
+          }
+          &:before {
+            background-image: url(assets/mail.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 1.5rem;
+            width: 1.5rem;
+            content: "";
+            display: inline-block;
+            position: absolute;
+          }
+        }
+        .mailid {
+          a {
+            left: 2rem;
+            color: #f8f7f4;
+            position: relative;
+          }
+          &:before {
+            background-image: url(assets/smartphone.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 1.5rem;
+            width: 1.5rem;
+            content: "";
+            display: inline-block;
+            position: absolute;
+          }
+        }
+        h4 {
+          color: #f8f7f4;
+        }
+        p {
+          color: #f8f7f4;
+        }
+        h5 {
+          color: #f8f7f4;
+          a {
+            font-weight: 800;
+          }
+          a {
+            text-decoration: underline;
+            color: #f8f7f4;
+          }
+        }
+      }
+    }
+  }
+}
