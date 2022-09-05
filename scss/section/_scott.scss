@@ -84,15 +84,18 @@ nav.pagination {
     padding: 2rem;
     background-color: #eae0dc;
     color: #1f2227;
+    margin-right: 1rem;
   }
   & > .current {
     padding: 2rem;
     background-color: #1f2227;
     color: #fff;
+    margin-right: 1rem;
   }
   & > a {
     padding: 2rem;
     color: #1f2227;
+    margin-right: 1rem;
     background-color: #eae0dc;
   }
 }
@@ -238,5 +241,14 @@ nav.pagination {
   padding-left: 0;
   li {
     padding-right: 1rem;
+  }
+}
+
+.gallery-wrap {
+  .c-card {
+    min-height: 26rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
