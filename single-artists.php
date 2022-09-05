@@ -29,7 +29,9 @@ get_header();
 
 
 			<div class="row section-heading">
-				<div class="col-12">	<h2  class="pb-5 font-ivy-bold">Gallery</h2></div>
+				<div class="col-12">
+						<h2  class="pb-5 font-ivy-bold">Gallery</h2>
+					</div>
 			</div>
 			<ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
 						
@@ -88,11 +90,15 @@ $images = get_sub_field('images');
 if( $images ): ?>
 
         <?php foreach( $images as $image ): ?>
-			<div class="col-md-4">
+			<div class="col-md-4 mb-5">
+				<div class="c-card bg-img" style="background-image:url('<?php echo esc_url($image['sizes']['artists']); ?>')">
+
                 <a href="<?php echo esc_url($image['url']); ?>">
-                     <img class="w-100" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                     <img class="w-100" src="" alt="<?php echo esc_attr($image['alt']); ?>" />
                 </a>
-                <p><?php echo esc_html($image['caption']); ?></p>
+
+				</div>
+             
 				</div>
         <?php endforeach; ?>
 	
@@ -137,11 +143,14 @@ $images = get_sub_field('images');
 if( $images ): ?>
 
         <?php foreach( $images as $image ): ?>
-			<div class="col-md-4">
-                <a href="<?php echo esc_url($image['url']); ?>">
-                     <img class="w-100" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                </a>
-                <p><?php echo esc_html($image['caption']); ?></p>
+			<div class="col-md-4 mb-5">
+			<div class="c-card bg-img" style="background-image:url('<?php echo esc_url($image['sizes']['artists']); ?>')">
+
+<a href="<?php echo esc_url($image['url']); ?>">
+	 <img class="w-100" src="" alt="<?php echo esc_attr($image['alt']); ?>" />
+</a>
+
+</div>
 				</div>
         <?php endforeach; ?>
 	

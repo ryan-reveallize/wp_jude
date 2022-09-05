@@ -243,3 +243,12 @@ nav.pagination {
     padding-right: 1rem;
   }
 }
+
+.gallery-wrap {
+  .c-card {
+    min-height: 26rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
