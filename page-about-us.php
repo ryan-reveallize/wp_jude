@@ -57,6 +57,24 @@ get_header();
             </div>
         </div>
     </section>
+    <section class="our-goal">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 our-goal-item">
+                    <h3 class="display-4 font-ivy-thin">Mission</h3>
+                    <p  class="mb-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
+                </div>
+                <div class="col-md-4 our-goal-item">
+                    <h3 class="display-4 font-ivy-thin">Vision</h3>
+                    <p  class="mb-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
+                </div>
+                <div class="col-md-4 our-goal-item">
+                    <h3 class="display-4 font-ivy-thin">Values</h3>
+                    <p  class="mb-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="pb-5">
         <div class="container">
             <?php include('inc/insta-section.php') ?>
