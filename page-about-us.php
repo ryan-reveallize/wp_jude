@@ -57,23 +57,11 @@ get_header();
             </div>
         </div>
     </section>
-    <div class="instagram-section mb-5 pb-lg-5">
-        <div class="container-fluid ps-md-0">
-            <div class="row justify-content-end">
-                <div class="col-md-11 pe-0 ps-md-0">
-                    <h3 class="font-ivy-bold mb-4 animate__animated" data-animate="fadeInUp">Follow Us on Instagram</h3>
-                    <div class="insta-feed animate__animated" data-animate="fadeInUp">
-                        <img src="<?php bloginfo('template_directory') ?>/assets/images/G L Askew II.jpg" alt="G L Askew II" class="insta-item" />
-                        <img src="<?php bloginfo('template_directory') ?>/assets/images/G L Askew II.jpg" alt="G L Askew II" class="insta-item" />
-                        <img src="<?php bloginfo('template_directory') ?>/assets/images/G L Askew II.jpg" alt="G L Askew II" class="insta-item" />
-                        <img src="<?php bloginfo('template_directory') ?>/assets/images/G L Askew II.jpg" alt="G L Askew II" class="insta-item" />
-                        <img src="<?php bloginfo('template_directory') ?>/assets/images/G L Askew II.jpg" alt="G L Askew II" class="insta-item" />
-                        <img src="<?php bloginfo('template_directory') ?>/assets/images/G L Askew II.jpg" alt="G L Askew II" class="insta-item" />
-                    </div>
-                </div>
-            </div>
+    <section class="pb-5">
+        <div class="container">
+            <?php include('inc/insta-section.php') ?>
         </div>
-    </div>
+    </section>
 </main><!-- #main -->
 <script>
     jQuery(window).load(function($) {
