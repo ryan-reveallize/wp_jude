@@ -61,7 +61,7 @@ get_header();
 		</div>
 		<div class="col-md-5 directions-wrap">
 <div class="d-flex align-items-center justify-content-center h-100">
-<div class="directions">
+<div class="directions mt-5 mb-5 mt-lg-0 mb-lg-0">
 			<h4 class="font-ivy-bold">Where Are We Located?</h4>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
 		
@@ -83,17 +83,18 @@ get_header();
 		</div>
 	</div>
 </div>
+<div class="instagram-section mb-5 pb-lg-5 pt-5">
+        <div class="container-fluid ps-md-0">
+            <div class="row justify-content-end">
+                <div class="col-md-12 pe-0 ps-md-0">
+                    <h3 class="font-ivy-bold mb-4 animate__animated" data-animate="fadeInUp">Follow Us on Instagram</h3>
+                    <div class="insta-feed animate__animated" data-animate="fadeInUp">
+					<?php echo do_shortcode('[insta-gallery id="1"]');  ?>   </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="bottom-section mt-5">
-	<div class="row">
-		<div class="col-12">
-			<h1 class="font-ivy-bold">
-				Follow Us on Instagram
-			</h1>
-			<?php echo do_shortcode('[insta-gallery id="1"]');  ?>
-		</div>
-	</div>
-</div>
 
        </div>
 	</main><!-- #main -->
