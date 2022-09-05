@@ -64,7 +64,7 @@ $posts_end = $posts_start + $current_post_count;
 				</div>
 
 				<?php if(has_post_thumbnail()){ ?>
-<div class="c-card bg-img " style="background-image:url(<?php the_post_thumbnail_url('artists',array('class'=>'listing-artists w-100'))?>);">
+<div class="c-card bg-img " style="background-image:url(<?php the_post_thumbnail_url('',array('class'=>'listing-artists w-100'))?>);">
 				<a class="anim-image-hover d-block weblink" href="<?php echo the_permalink(); ?>">
 				<?php }else{
 					?>

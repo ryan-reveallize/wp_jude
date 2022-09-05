@@ -91,7 +91,7 @@ if( $images ): ?>
 
         <?php foreach( $images as $image ): ?>
 			<div class="col-md-4 mb-5">
-				<div class="c-card bg-img" style="background-image:url('<?php echo esc_url($image['sizes']['artists']); ?>')">
+				<div class="c-card bg-img" style="background-image:url('<?php echo esc_url($image['url']); ?>')">
 
                 <a href="<?php echo esc_url($image['url']); ?>">
                      <img class="w-100" src="" alt="<?php echo esc_attr($image['alt']); ?>" />
@@ -144,7 +144,7 @@ if( $images ): ?>
 
         <?php foreach( $images as $image ): ?>
 			<div class="col-md-4 mb-5">
-			<div class="c-card bg-img" style="background-image:url('<?php echo esc_url($image['sizes']['artists']); ?>')">
+			<div class="c-card bg-img" style="background-image:url('<?php echo esc_url($image['url']); ?>')">
 
 <a href="<?php echo esc_url($image['url']); ?>">
 	 <img class="w-100" src="" alt="<?php echo esc_attr($image['alt']); ?>" />
