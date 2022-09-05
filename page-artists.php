@@ -18,7 +18,7 @@ get_header();
 <main id="primary" class="site-main pb-5 mb-5">
         <div class="container">
 
-			<h1 class="mb-5 font-ivy-thin">Our Artists</h1>
+			<h1 class="mb-5 font-ivy-thin display-2">Our Artists</h1>
 <div class="artists-filter mb-5">
 		<?php echo do_shortcode('[searchandfilter id="37"]'); ?>
 		</div>
