@@ -55,7 +55,11 @@ get_header();
             <?php include('inc/home-artist.php') ?>
         </div>
     </section>
-    <?php include('inc/insta-section.php') ?>
+    <section>
+        <div class="container">
+            <?php include('inc/insta-section.php') ?>
+        </div>
+    </section>
 </main><!-- #main -->
 <script>
     jQuery(window).load(function($) {
