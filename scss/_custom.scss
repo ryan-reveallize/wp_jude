@@ -1,27 +1,43 @@
-:root{
+:root {
     --j-light: #F8F7F4
 }
-.font-ivy{
+
+.font-ivy {
     font-family: 'ivy-mode-regular';
 }
-.font-ivy-bold{
+
+.font-ivy-bold {
     font-family: 'ivy-mode-bold';
-    line-height: 1.6;;
+    line-height: 1.6;
+    ;
 }
+
 .font-ivy-thin {
     font-family: 'ivy-mode-thin';
-    line-height: 1.6;;
+    line-height: 1.4;
+    ;
 }
-body{
+
+body {
     background-color: var(--j-light)
 }
-.searchandfilter label{
+
+.searchandfilter label {
     display: block;
 }
-.searchandfilter select.sf-input-select{
+
+.searchandfilter select.sf-input-select {
     width: 100%;
     max-width: 300px;
     padding: 0.875rem 1rem;
     background-color: $white;
     border: 1px solid #EAE0DC;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }

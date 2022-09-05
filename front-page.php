@@ -16,6 +16,11 @@
 get_header();
 ?>
 
+<style>
+    .top-logo-container{
+        display: none;
+    }
+</style>
 <main id="primary" class="site-main">
     <div class="hero-section">
         <div class="container-fluid">

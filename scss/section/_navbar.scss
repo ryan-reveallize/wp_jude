@@ -79,7 +79,14 @@ header {
         }
     }
 }
-
+.top-logo-container{
+    display: none;
+    img{
+        display: block;
+        max-width: 100px;
+        height: auto;
+    }
+}
 @media screen and (max-width: 767px) {
     .main-navigation {
         .nav-wrapper {
