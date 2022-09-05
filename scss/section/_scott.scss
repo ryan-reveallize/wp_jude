@@ -205,3 +205,38 @@ nav.pagination {
     }
   }
 }
+
+.single-artist {
+  .artist-title {
+    max-width: 25rem;
+  }
+  .nav-tabs {
+    border-bottom: 0 !important;
+    .nav-link {
+      border: 0;
+      box-shadow: 0;
+      text-decoration: underline;
+      color: #1f2227;
+      background-color: transparent !important;
+      border-right: 1px solid #eae0dc;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    li:last-child {
+      button {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.img-categories {
+  list-style: none;
+  display: flex;
+  text-decoration: underline;
+  padding-left: 0;
+  li {
+    padding-right: 1rem;
+  }
+}

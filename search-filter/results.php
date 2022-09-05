@@ -77,7 +77,47 @@ $posts_end = $posts_start + $current_post_count;
 
 			</div>
 			<h3 class="mt-4"><?php the_title();?></h3>
-					<p><?php excerpt('15'); ?></p>
+			<ul class="img-categories">
+			<?php
+
+// Check rows exists.
+if( have_rows('gallery_options') ):
+$count=0;
+	// Loop through rows.
+	while( have_rows('gallery_options') ) : the_row();
+
+?>
+
+  <?php 
+$title = get_sub_field('title');
+?>
+<li><?php echo $title;  ?></li>
+
+<?php
+					// End loop.
+					$count++;
+					endwhile;
+
+				// No value.
+				else :
+					// Do something...
+				endif;
+				?>
+
+				<li>
+				<?php	
+				$i=1;
+					while( have_rows('gallery_options') ) : the_row();
+
+					$i++;
+				endwhile;
+				if($i>4){echo '+3'; }
+				
+				?>
+			</li>
+
+
+				</ul>
 					
 					<div class="btn-container">
 					<a class="btn btn-dark" href="<?php echo get_the_permalink(); ?>">Portfolio</a>
@@ -125,3 +165,17 @@ else
 	echo "No Results Found";
 }
 ?>
+
+<script>
+	jQuery( document ).ready(function() {
+
+	jQuery('.img-categories>li').hide();
+jQuery(".img-categories>li:nth-child(1)").show();
+jQuery(".img-categories>li:nth-child(2)").show();
+jQuery(".img-categories>li:nth-child(3)").show();
+jQuery(".img-categories>li:nth-child(4)").show();
+jQuery(".img-categories>li:last-child").show();
+
+
+	});
+</script>
