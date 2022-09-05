@@ -57,7 +57,7 @@ get_header();
             </div>
         </div>
     </section>
-    <section>
+    <section class="pb-5">
         <div class="container">
             <?php include('inc/insta-section.php') ?>
         </div>

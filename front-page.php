@@ -55,7 +55,7 @@ get_header();
             <?php include('inc/home-artist.php') ?>
         </div>
     </section>
-    <section>
+    <section class="pb-5">
         <div class="container">
             <?php include('inc/insta-section.php') ?>
         </div>
