@@ -252,3 +252,21 @@ nav.pagination {
     background-position: center;
   }
 }
+
+.insta-overlay {
+  position: relative;
+  &:before {
+    content: "";
+    z-index: 5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(
+      90deg,
+      rgba(248, 247, 244, 0) 0%,
+      rgb(248, 247, 244) 100%
+    );
+  }
+}
