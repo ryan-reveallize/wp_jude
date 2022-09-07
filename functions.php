@@ -146,9 +146,10 @@ function jude_scripts()
 	wp_enqueue_style('jude-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_style_add_data('jude-style', 'rtl', 'replace');
 
-	wp_enqueue_script('clr-bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), _S_VERSION, true);
-	wp_enqueue_script('clr-scrolla', get_template_directory_uri() . '/js/jquery.scrolla.min.js', array(), _S_VERSION, true);
-	wp_enqueue_script('clr-script', get_template_directory_uri() . '/js/script.js', array(), _S_VERSION, true);
+	wp_enqueue_script('jude-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script('jude-bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), _S_VERSION, true);
+	wp_enqueue_script('jude-scrolla', get_template_directory_uri() . '/js/jquery.scrolla.min.js', array(), _S_VERSION, true);
+	wp_enqueue_script('jude-script', get_template_directory_uri() . '/js/script.js', array(), _S_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
@@ -200,8 +201,8 @@ function clm_custom_post()
 
 	//  dealers
 	register_post_type('Artists', array(
-
-		'rewrite' => false,
+		'rewrite' => array('slug' => 'artists'),
+		//'rewrite' => false,
 		'labels' => array(
 			'name' => 'Artists',
 			'singular_name' => 'artists',
