@@ -61,7 +61,7 @@ if ($query->have_posts()) {
             $query->the_post();
         ?>
 
-            <div class="col-lg-4 col-md-6 mb-5">
+            <div class="col-lg-4 col-md-6 mb-5 animate__animated" data-animate="fadeInUp">
                 <div class="block-wrap">
                     <div class="img-wrap">
                         <?php /*?>
@@ -78,7 +78,7 @@ if ($query->have_posts()) {
 				<?php */ ?>
 
                         <?php if (has_post_thumbnail()) { ?>
-                            <div class="c-card bg-img animate__animated" data-animate="fadeInUp" style="background-image:url(<?php the_post_thumbnail_url('', array('class' => 'listing-artists w-100')) ?>);">
+                            <div class="c-card bg-img" style="background-image:url(<?php the_post_thumbnail_url('', array('class' => 'listing-artists w-100')) ?>);">
                                 <a class="anim-image-hover d-block weblink" href="<?php echo the_permalink(); ?>">
                                 <?php } else {
                                 ?>
