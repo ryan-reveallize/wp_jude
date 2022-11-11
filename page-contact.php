@@ -18,7 +18,7 @@ get_header();
 
 <main id="primary" class="site-main contact-us pb-5 mb-5">
 	<div class="container">
-		<div class="row top-section justify-content-center ">
+		<div class="row top-section justify-content-center pb-5">
 			<div class="about-wrapper">
 				<h1 class="mb-5 text-center display-1 font-ivy-thin">Get in touch with us for more information</h1>
 				<p class="text-center mb-5">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lor</p>
@@ -57,9 +57,9 @@ get_header();
 		</div>
 
 
-		<div class="mid-section mt-5 pt-3">
+		<div class="mid-section">
 			<div class="row justify-content-center">
-				<div class="col-md-7 map-wrap">
+				<div class="col-md-7 p-0 map-wrap">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.869500875516!2d-118.32332229999999!3d34.0984834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf37e4f9f7af%3A0xd759819ef74497a8!2sThe%20JUDE%20Group!5e0!3m2!1sen!2snp!4v1662281851065!5m2!1sen!2snp" frameborder="0" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 				<div class="col-md-5 directions-wrap">
