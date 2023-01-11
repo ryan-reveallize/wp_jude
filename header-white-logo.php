@@ -108,6 +108,7 @@ footer ul a{font-size:12px;}
 			<nav id="site-navigation" class="main-navigation">
 				<div class="d-flex d-md-none justify-content-between align-items-center py-2 px-3">
 					<?php the_custom_logo(); ?>
+</a>
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
 				</div>
 				<div class="nav-wrapper">
@@ -150,6 +151,8 @@ footer ul a{font-size:12px;}
 		</header>
 		<div class="top-logo-container">
 			<div class="container">
-				<?php the_custom_logo(); ?>
+				<a class="navbar-brand logo" href="/">
+    <img src="<?php bloginfo('template_directory') ?>/assets/logo-white.png">
+</a>
 			</div>
 		</div>

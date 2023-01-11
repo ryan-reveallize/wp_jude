@@ -25,7 +25,7 @@
 
 $args = array(
     'post_type'                => 'artists',
-    'posts_per_page'           => 10,
+    'posts_per_page'           => 9,
     'orderby'                  => 'name',
     'order'                    => 'ASC',
     'meta_key'        => '',
@@ -55,7 +55,7 @@ if ($query->have_posts()) {
 
     ?>
 
-    <div class="row gutters-40 artists-wrap mb-5">
+    <div class="row gutters-40_ artists-wrap mb-5">
         <?php
         while ($query->have_posts()) {
             $query->the_post();

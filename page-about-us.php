@@ -20,8 +20,8 @@ get_header();
         <div class="container-fluid">
             <div class="row justify-content-lg-end">
                 <div class="col-lg-11 hero-section-wrapper about-section-wrapper">
-                    <div class="row align-items-center">
-                        <div class="col-md-7 order-md-2 pe-md-0">
+                    <div class="row">
+                        <div class="col-md-7 order-md-2 pe-md-0 position-relative">
                             <?php include('inc/about-hero-scroll.php') ?>
                         </div>
                         <div class="col-md-5 order-md-1 about-wrapper">

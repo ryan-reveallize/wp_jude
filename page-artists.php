@@ -13,7 +13,7 @@
  * @package Jude
  */
 
-get_header();
+get_header('white-logo');
 ?>
 
 <?php
@@ -40,34 +40,35 @@ if ($the_query->have_posts()) {
 ?>
 
 <main id="primary" class="site-main pb-5 mb-5">
+    <div class="header-banner bg-img mb-5" data-background-image="<?= get_the_post_thumbnail_url(); ?>">
+        <div class="container z-2">
+        	<div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="row align-items-center artists-wrapper">
+                        <div class="col-md-6 col-lg-8">
+                            <h1 class="display-1 font-ivy-thin mb-3 text-white">Our Artists</h1>
+                        </div>
+                        <div class="col-md-6 col-lg-4 text-md-end">
+                            <div class="artists-filter" style="position:relative;z-index:9999;">
+                                <form class="searchandfilter" id="search-filter-form-37">
+                                    <ul>
+                                        <li class="sf-field-taxonomy-artists-category" data-sf-field-name="_sft_artists-category" data-sf-field-type="taxonomy" data-sf-field-input-type="select">
+                                            <label>
+                                                <select name="_sft_artists-category[]" class="sf-input-select" title="">
 
-    <div class="container">
-        <div class="row">
+                                                    <option class="sf-level-0 sf-item-0 sf-option-active" selected="selected" data-sf-count="0" data-sf-depth="0" value="">Select Artist By Category</option>
 
-            <div class="col-md-6 col-xl-5 order-md-1 artists-wrapper mb-0">
-                <div class="col-lg-10 mt-md-5 pt-md-5 animate__animated" data-animate="fadeIn">
-                    <h1 class="display-1 font-ivy-thin mb-3 mt-lg-5 pt-md-5">Our Artists</h1>
-                    <div class="artists-filter mb-5" style="position:relative;z-index:9999;">
-
-                        <div class="artists-filter mb-5">
-                            <form class="searchandfilter" id="search-filter-form-37">
-                                <ul>
-                                    <li class="sf-field-taxonomy-artists-category" data-sf-field-name="_sft_artists-category" data-sf-field-type="taxonomy" data-sf-field-input-type="select">
-                                        <label>
-                                            <select name="_sft_artists-category[]" class="sf-input-select" title="">
-
-                                                <option class="sf-level-0 sf-item-0 sf-option-active" selected="selected" data-sf-count="0" data-sf-depth="0" value="">Select Artist By Category</option>
-
-                                                <?php foreach (array_unique($dataTitle) as $data) { ?>
-                                                    <option <?php if ($data === $_GET['filter']) {
-                                                                echo 'selected';
-                                                            } ?> class="sf-level-0 sf-item-2" value="<?php echo $data; ?>"><?php echo $data; ?></option>
-                                                <?php } ?>
-                                            </select>
-                                        </label>
-                                    </li>
-                                </ul>
-                            </form>
+                                                    <?php foreach (array_unique($dataTitle) as $data) { ?>
+                                                        <option <?php if ($data === $_GET['filter']) {
+                                                                    echo 'selected';
+                                                                } ?> class="sf-level-0 sf-item-2" value="<?php echo $data; ?>"><?php echo $data; ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
