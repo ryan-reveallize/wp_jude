@@ -287,3 +287,13 @@ if (function_exists('acf_add_options_page')) {
 		'parent_slug' => $parent['menu_slug'],
 	));
 }
+
+add_action( 'init', 'my_book_cpt' );
+function my_book_cpt() {
+    $args = array(
+      'public'       => true,
+      'show_in_rest' => true,
+      'label'        => 'Artist'
+    );
+    register_post_type( 'artists', $args );
+}
