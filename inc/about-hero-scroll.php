@@ -1,6 +1,11 @@
 <?php
 if (have_rows('hero_scroll_images', 'options')) :
     $i = 0;
+    if (get_field('scroll_timing', 'options')) {
+        $timing = get_field('scroll_timing', 'options');
+    } else {
+        $timing = 4;
+    }
     while (have_rows('hero_scroll_images', 'options')) : the_row();
         $artist = get_sub_field('artist');
         $image = get_sub_field('image');
@@ -13,7 +18,7 @@ endif;
 <div class="hero-images-wrapper about-images-wrapper">
     <div class="hero-images">
         <div class="row">
-            <div class="col-6 hero-image-col first-col">
+            <div class="col-6 hero-image-col first-col scroll scroll-up" style="--imageCount: <?php echo $i; ?>;--animate-duration: <?php echo $timing; ?>s;">
                 <?php
                 shuffle($heroScrollImages);
                 foreach ($heroScrollImages as $scroll) :
@@ -24,7 +29,7 @@ endif;
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="col-6 hero-image-col mid-col">
+            <div class="col-6 hero-image-col mid-col scroll scroll-down" style="--imageCount: <?php echo $i; ?>;--animate-duration: <?php echo $timing; ?>s;">
                 <?php
                 shuffle($heroScrollImages);
                 foreach ($heroScrollImages as $scroll) :
