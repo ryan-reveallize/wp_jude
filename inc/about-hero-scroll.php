@@ -1,42 +1,35 @@
 <?php
-if (have_rows('hero_scroll_images', 'options')) :
+if (have_rows('images')) :
     $i = 0;
-    if (get_field('scroll_timing', 'options')) {
-        $timing = get_field('scroll_timing', 'options');
+    if (get_field('scroll_timing')) {
+        $timing = get_field('scroll_timing');
     } else {
         $timing = 4;
     }
-    while (have_rows('hero_scroll_images', 'options')) : the_row();
-        $artist = get_sub_field('artist');
-        $image = get_sub_field('image');
-        $heroScrollImages[$i]['image'] = $image;
-        $heroScrollImages[$i]['artist'] = $artist->post_title;
-        $i++;
-    endwhile;
+    $gallery = get_field('images');
+    $i = count($gallery);
 endif;
 ?>
 <div class="hero-images-wrapper about-images-wrapper">
     <div class="hero-images">
         <div class="row">
-            <div class="col-6 hero-image-col first-col scroll scroll-up" style="--imageCount: <?php echo $i; ?>;--animate-duration: <?php echo $timing; ?>s;">
+            <div class="col-6 hero-image-col first-col scroll scroll-large scroll-up" style="--imageCount: <?php echo $i; ?>;--animate-duration: <?php echo $timing; ?>s;">
                 <?php
-                shuffle($heroScrollImages);
-                foreach ($heroScrollImages as $scroll) :
+                shuffle($gallery);
+                foreach ($gallery as $scroll) :
                 ?>
                     <div class="hero-image-container">
-                        <img src="<?= $scroll['image'] ?>" alt="Gallery" class="hero-image" />
-                        <p class="font-ivy mb-0"><?= $scroll['artist'] ?></p>
+                        <img src="<?= $scroll ?>" alt="Gallery" class="hero-image" />
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="col-6 hero-image-col mid-col scroll scroll-down" style="--imageCount: <?php echo $i; ?>;--animate-duration: <?php echo $timing; ?>s;">
+            <div class="col-6 hero-image-col mid-col scroll scroll-large scroll-down" style="--imageCount: <?php echo $i; ?>;--animate-duration: <?php echo $timing; ?>s;">
                 <?php
-                shuffle($heroScrollImages);
-                foreach ($heroScrollImages as $scroll) :
+                shuffle($gallery);
+                foreach ($gallery as $scroll) :
                 ?>
                     <div class="hero-image-container">
-                        <img src="<?= $scroll['image'] ?>" alt="Gallery" class="hero-image" />
-                        <p class="font-ivy mb-0"><?= $scroll['artist'] ?></p>
+                        <img src="<?= $scroll ?>" alt="Gallery" class="hero-image" />
                     </div>
                 <?php endforeach; ?>
             </div>

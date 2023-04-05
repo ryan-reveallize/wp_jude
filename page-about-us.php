@@ -25,9 +25,9 @@ get_header();
                             <?php include('inc/about-hero-scroll.php') ?>
                         </div>
                         <div class="col-md-5 order-md-1 about-wrapper">
-                                <h1 class="display-1 font-ivy-thin mb-4">ABOUT US</h1>
+                            <h1 class="display-1 font-ivy-thin mb-4">ABOUT US</h1>
                             <div class="col-lg-8  animate__animated" data-animate="fadeIn">
-                                <p class="h3 font-ivy-bold mb-4 mb-lg-5">We support <br/> creative artists & give<br/>  form to vision.</p>
+                                <p class="h3 font-ivy-bold mb-4 mb-lg-5">We support <br /> creative artists & give<br /> form to vision.</p>
                                 <p class="mb-4 mb-lg-5">We do not take cues, we follow the guidance of inspiration and instinct. In a time of oversharing, JUDE embraces the understated and unspoken. We embrace anomalies and contradictions and believe in what is true, real, and original.</p>
                             </div>
                         </div>
@@ -39,17 +39,16 @@ get_header();
     </div>
     <section class="py-5 mb-lg-5">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-xl-5 col-md-6">
                     <div class="our-story-img animate__animated" data-animate="fadeInUp">
-                        <?= the_post_thumbnail()?>
+                        <?= the_post_thumbnail() ?>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-5 col-md-6 offset-lg-1">
                     <h3 class="mb-4 font-ivy-bold animate__animated" data-animate="fadeInRight">Our Story</h3>
-                    <p class="animate__animated" data-animate="fadeInRight">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt.Nulla quis lorem ut libero malesuada feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-                    <p class="animate__animated" data-animate="fadeInRight">Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit.Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Vestibulum ac diam.</p>
-                    
+                    <?php the_content() ?>
+
                     <img src="<?php bloginfo('template_directory') ?>/assets/sign.png" alt="old Happy Couple" class="our-story-sign animate__animated" data-animate="fadeInRight" />
                     <p class="mb-0 animate__animated" data-animate="fadeInRight">Jaime Lannister</p>
                     <small class="text-muted animate__animated" data-animate="fadeInRight">CO-FOUNDER</small>

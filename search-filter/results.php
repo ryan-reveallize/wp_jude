@@ -138,7 +138,7 @@ $title = get_sub_field('title');
 					
 				<?php */ ?>
                             <div class="btn-container">
-                                <a class="btn btn-dark" href="<?php echo get_the_permalink(); ?>">Portfolio</a>
+                                <a class="btn btn-blue btn-dark" href="<?php echo get_the_permalink(); ?>">Portfolio</a>
                             </div>
 
                     </div>
