@@ -17,79 +17,93 @@ get_header();
 ?>
 
 <main id="primary" class="site-main contact-us pb-5 mb-5">
-	<div class="container">
-		<div class="row top-section justify-content-center pb-5">
-			<div class="about-wrapper">
-				<h1 class="mb-5 text-center display-1 font-ivy-thin">Get in touch with us for more information</h1>
-				<p class="text-center mb-5">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lor</p>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-10 col-md-12">
-					<div class="row ">
-						<div class="col-md-6">
-							<div class="block-wrap">
-								<div class="text-uppercase">
-									FOR BOOKINGS:
-								</div>
-								<h4 class="mb-3">Laura Elizabeth Andonian</h4>
-								<div class="btn-container ">
-									<a class="btn btn-dark" href="mailto:laura@thejudegroup.com">laura@thejudegroup.com</a>
-								</div>
-							</div>
-						</div>
+    <div class="container">
+        <div class="row top-section justify-content-center pb-5">
+            <div class="about-wrapper">
+                <h1 class="mb-5 text-center display-1 font-ivy-thin"><?php echo get_field('title',false); ?></h1>
+                <p class="text-center mb-5"><?php echo get_field('subtitle',false, false); ?></p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12">
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <div class="block-wrap">
+                                <?php if( have_rows('for_bookings') ): ?>
+                                <?php while( have_rows('for_bookings') ): the_row(); 
+								?>
+                                <div class="text-uppercase">
+                                    FOR BOOKINGS:
+                                </div>
+                                <h4 class="mb-3"><?php echo get_sub_field('name'); ?></h4>
+                                <div class="btn-container ">
+                                    <a class="btn btn-dark"
+                                        href="mailto:<?php echo get_sub_field('email'); ?>"><?php echo get_sub_field('email'); ?></a>
+                                </div>
+                                <?php endwhile; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
 
-						<div class="col-md-6">
-							<div class="block-wrap">
-								<div class="text-uppercase">
-									FOR BILLING:
-								</div>
-								<h4 class="mb-3">Meghan Horwitz</h4>
-								<div class="btn-container ">
-									<a class="btn btn-dark" href="mailto:meghan@thejudegroup.com">meghan@thejudegroup.com</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                        <div class="col-md-6">
+                            <div class="block-wrap">
+                                <?php if( have_rows('for_billing') ): ?>
+                                <?php while( have_rows('for_billing') ): the_row(); 
+								?>
+                                <div class="text-uppercase">
+                                    FOR BILLING:
+                                </div>
+                                <h4 class="mb-3"><?php echo get_sub_field('name'); ?></h4>
+                                <div class="btn-container ">
+                                    <a class="btn btn-dark"
+                                        href="mailto:<?php echo get_sub_field('email'); ?>"><?php echo get_sub_field('email'); ?></a>
+                                </div>
+                                <?php endwhile; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-		</div>
+        </div>
 
 
-		<div class="mid-section">
-			<div class="row justify-content-center">
-				<div class="col-md-7 p-0 map-wrap">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.869500875516!2d-118.32332229999999!3d34.0984834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf37e4f9f7af%3A0xd759819ef74497a8!2sThe%20JUDE%20Group!5e0!3m2!1sen!2snp!4v1662281851065!5m2!1sen!2snp" frameborder="0" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-				<div class="col-md-5 directions-wrap">
-					<div class="d-flex align-items-center justify-content-center h-100">
-						<div class="directions mt-5 mb-5 mt-lg-0 mb-lg-0">
-							<h4 class="font-ivy-bold">Where Are We Located?</h4>
-							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+        <div class="mid-section">
+            <div class="row justify-content-center">
+                <div class="col-md-7 p-0 map-wrap">
+                    <?php echo get_field('map',false); ?>
+                </div>
+                <div class="col-md-5 directions-wrap">
+                    <div class="d-flex align-items-center justify-content-center h-100">
+                        <div class="directions mt-5 mb-5 mt-lg-0 mb-lg-0">
+                            <h4 class="font-ivy-bold">Where Are We Located?</h4>
+                            <p> <?php echo get_field('where_are_we_located',false); ?></p>
 
-							<ul class="pt-3">
-								<h5 class="pb-2"> <a href="https://goo.gl/maps/gkZdX3Juo6J2">Get Directions</a> </h5>
-								<li class="location">
-									<span> 6121 Sunset Blvd, Los Angeles, CA 90028, Estados Unidos</span>
-								</li>
-								<li class="mailid">
-									<a href="mailto:info@thejudegroup.com">info@thejudegroup.com</a>
-								</li>
-								<li class="phoneno">
-									<a href="tel:323.490.1288"> 323.490.1288</a>
-								</li>
-							</ul>
+                            <ul class="pt-3">
+                                <h5 class="pb-2"> <a href="https://goo.gl/maps/gkZdX3Juo6J2">Get Directions</a> </h5>
+                                <li class="location">
+                                    <span> <?php echo get_field('our_location',false); ?></span>
+                                </li>
+                                <li class="mailid">
+                                    <a
+                                        href="mailto:<?php echo get_field('our_email'); ?>"><?php echo get_field('our_email'); ?></a>
+                                </li>
+                                <li class="phoneno">
+                                    <a href="tel:<?php echo get_field('our_phone_number'); ?>">
+                                        <?php echo get_field('our_phone_number'); ?></a>
+                                </li>
+                            </ul>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php include('inc/insta-section.php') ?>
 
 
-	</div>
+    </div>
 </main><!-- #main -->
 
 <?php

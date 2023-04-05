@@ -14,14 +14,15 @@ get_header();
 $cat = @$_GET['cat'];
 $imageAll = [];
 
-foreach (get_field('gallery_options') as $gallery) {
-    if ($cat && strtolower($gallery['title']) == strtolower($cat)) {
+foreach(get_field('gallery_options') as $gallery)
+{
+    if($cat && strtolower($gallery['title']) == strtolower($cat)){
         $imageAll = is_array($gallery['images']) ? $gallery['images'] : [];
 
-        break;
-    } else {
-        if (is_array($gallery['images'])) {
-            foreach ($gallery['images'] as $images) {
+        break; 
+    }else{
+        if(is_array($gallery['images'])){
+            foreach($gallery['images'] as $images){
                 array_push($imageAll, $images);
             }
         }
@@ -51,7 +52,7 @@ foreach (get_field('gallery_options') as $gallery) {
         border-radius: 0
     } */
     .single-artist .nav-tabs .nav-link:not(.underline) {
-        text-decoration: unset !important
+        text-decoration: unset!important
     }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async>
@@ -106,7 +107,7 @@ foreach (get_field('gallery_options') as $gallery) {
         <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
 
             <li class="nav-item" role="presentation">
-                <a href="<?php echo home_url($wp->request) ?>"><button class="nav-link active <?php if (!isset($_GET['cat'])) echo 'underline'; ?>" type="button">All</button></a>
+                <a href="<?php echo home_url( $wp->request )?>"><button class="nav-link active <?php if(!isset($_GET['cat'])) echo 'underline'; ?>" type="button">All</button></a>
             </li>
             <?php
             // Check rows exists.
@@ -120,7 +121,7 @@ foreach (get_field('gallery_options') as $gallery) {
                         $numbersremoved = preg_replace('/[0-9]+/', '', get_sub_field('title'));
                         $spaceremoved = str_replace(' ', '', $numbersremoved);
                         ?>
-                        <a href='<?php echo home_url($wp->request) . '?cat=' . get_sub_field('title') ?>'><button class="nav-link <?php if (get_sub_field('title') == $_GET['cat'])  echo 'underline'; ?>" type="button"><?php echo get_sub_field('title'); ?></button></a>
+                        <a href='<?php echo home_url( $wp->request ) .'?cat='.get_sub_field('title') ?>'><button class="nav-link <?php if(get_sub_field('title') == $_GET['cat'])  echo 'underline'; ?>" type="button"><?php echo get_sub_field('title'); ?></button></a>
                     </li>
             <?php $count++;
                 endwhile;
@@ -136,33 +137,19 @@ foreach (get_field('gallery_options') as $gallery) {
             ?>
             <div class="tab-pane fade show active">
                 <div class="gallery-wrapper gallery-<?= $count ?>">
-
-                    <div class="row card-columns">
+                     
+                        <div class="row card-columns">
                         <?php
-                        foreach (@$imageAll as $image) :
-                        ?>
+                         foreach (@$imageAll as $image) : ?>
                             <div class="gallery-item col-md-4 mb-4 animate__animated" data-animate="fadeIn">
                                 <div>
-                                    <?php //if ($image['type'] == 'image') : 
-                                    ?>
-                                    <a target="_blank" class=" <?php echo ($image['alt']) ? 'video' : 'image-popup'; ?>" href="<?php if ($image['alt']) echo $image['alt'];
-                                                                                                                            else echo esc_url($image['url']); ?>">
+                                    <a target="_blank" class="<?php if($image['alt']) echo 'video'; ?>" href="<?php if($image['alt']) echo $image['alt']; else echo esc_url($image['url']); ?>">
                                         <img class="img-fluid" load="lazy" srcset="<?php echo esc_url($image['sizes']['medium_large']) ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                                     </a>
-                                    <?php /* elseif ($image['type'] == 'video') : ?>
-                                        <a target="_blank" class="<?php if ($image['alt']) echo 'video'; ?>" href="<?php if ($image['alt']) echo $image['link'];
-                                                                                                                    else echo esc_url($image['url']); ?>">
-                                            <?php if (!empty($image['sizes'])) : ?>
-                                                <img class="img-fluid" load="lazy" srcset="<?php echo esc_url($image['sizes']['medium_large']) ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                                            <?php else : ?>
-                                                <video src="<?php echo $image['url'] ?>" controls class="img-fluid w-100"></video>
-                                            <?php endif; ?>
-                                        </a>
-                                    <?php endif; */ ?>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
-                    </div>
+                        <?php endforeach;?>
+                        </div>
                 </div>
             </div>
         </div>
@@ -184,7 +171,7 @@ foreach (get_field('gallery_options') as $gallery) {
         }, 600)
 
         jQuery('.gallery-wrapper').magnificPopup({
-            delegate: 'a.image-popup',
+            delegate: 'a',
             type: 'image',
             tLoading: 'Loading image #%curr%...',
             mainClass: 'mfp-img-mobile',
@@ -195,7 +182,7 @@ foreach (get_field('gallery_options') as $gallery) {
             }
         });
 
-        jQuery('.video').on('click', function(e) {
+        jQuery('.video').on('click', function(e){
             e.stopPropagation();
             e.preventDefault();
             window.open(jQuery(this).attr('href'), '_blank');
@@ -210,7 +197,7 @@ foreach (get_field('gallery_options') as $gallery) {
         // jQuery(window).on('scroll', function() {
         //     if(jQuery('.gallery-item:visible').length == <?php echo count($imageAll); ?>)
         //         return;
-
+            
         //     if(jQuery(window).scrollTop() >= jQuery('.card-columns').offset().top + jQuery('.card-columns').outerHeight() - window.innerHeight) {
         //         x= (x+10 <= size_li) ? x+10 : size_li;
         //         jQuery('.card-columns>div:lt('+x+')').show();
@@ -226,6 +213,7 @@ foreach (get_field('gallery_options') as $gallery) {
             }
         });
     });
+
 </script>
 <style>
     .gallery-all {
