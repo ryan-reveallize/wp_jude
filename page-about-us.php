@@ -15,6 +15,11 @@
 
 get_header();
 ?>
+<style>
+    .our-story-img>img {
+        width: 100%;
+    }
+</style>
 <main id="primary" class="site-main">
     <div class="hero-section">
         <div class="container-fluid">
@@ -40,18 +45,16 @@ get_header();
     <section class="py-5 mb-lg-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-xl-5 col-md-6">
-                    <div class="our-story-img animate__animated" data-animate="fadeInUp">
+                <div class="col-xl-5 col-md-6 mb-lg-0 mb-3">
+                    <div class="our-story-img animate__animated" data-animate="fadeIn">
                         <?= the_post_thumbnail() ?>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-5 col-md-6 offset-lg-1">
-                    <h3 class="mb-4 font-ivy-bold animate__animated" data-animate="fadeInRight">Our Story</h3>
-                    <?php the_content() ?>
-
-                    <img src="<?php bloginfo('template_directory') ?>/assets/sign.png" alt="old Happy Couple" class="our-story-sign animate__animated" data-animate="fadeInRight" />
-                    <p class="mb-0 animate__animated" data-animate="fadeInRight">Jaime Lannister</p>
-                    <small class="text-muted animate__animated" data-animate="fadeInRight">CO-FOUNDER</small>
+                    <h3 class="mb-4 font-ivy-bold animate__animated" data-animate="fadeIn">Our Story</h3>
+                    <div class="animate__animated" data-animate="fadeIn">
+                        <?php the_content() ?>
+                    </div>
                 </div>
             </div>
         </div>

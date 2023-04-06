@@ -146,7 +146,7 @@ foreach (get_field('gallery_options') as $gallery) {
                                     <?php //if ($image['type'] == 'image') : 
                                     ?>
                                     <a target="_blank" class=" <?php echo ($image['alt']) ? 'video' : 'image-popup'; ?>" href="<?php if ($image['alt']) echo $image['alt'];
-                                                                                                                            else echo esc_url($image['url']); ?>">
+                                                                                                                                else echo esc_url($image['url']); ?>">
                                         <img class="img-fluid" load="lazy" srcset="<?php echo esc_url($image['sizes']['medium_large']) ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                                     </a>
                                     <?php /* elseif ($image['type'] == 'video') : ?>
@@ -176,12 +176,16 @@ foreach (get_field('gallery_options') as $gallery) {
 
 <script>
     jQuery(document).ready(function() {
-        setTimeout(() => {
-            jQuery('.card-columns').masonry({
-                itemSelector: '.gallery-item',
-                // columnWidth: 200 
-            });
-        }, 600)
+        for (var i = 1; i <= 60; i++) {
+            var timing = i * 600;
+            setTimeout(() => {
+                //console.log('s');
+                jQuery('.card-columns').masonry({
+                    itemSelector: '.gallery-item',
+                    // columnWidth: 200 
+                });
+            }, timing);
+        }
 
         jQuery('.gallery-wrapper').magnificPopup({
             delegate: 'a.image-popup',
@@ -224,6 +228,10 @@ foreach (get_field('gallery_options') as $gallery) {
             if (datasrc) {
                 jQuery(this).find(":lt(4)").find('img').attr('src', datasrc);
             }
+        });
+        jQuery('.card-columns').masonry({
+            itemSelector: '.gallery-item',
+            // columnWidth: 200 
         });
     });
 </script>

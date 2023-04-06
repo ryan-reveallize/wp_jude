@@ -40,7 +40,7 @@ function jude_setup()
 		* provide it for us.
 		*/
 	add_theme_support('title-tag');
-  add_theme_support( 'lazy-load' );
+	add_theme_support('lazy-load');
 	/*
 		* Enable support for Post Thumbnails on posts and pages.
 		*
@@ -146,7 +146,7 @@ function jude_scripts()
 	wp_enqueue_style('jude-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_style_add_data('jude-style', 'rtl', 'replace');
 
-	wp_enqueue_script('jude-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script('jude-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 	wp_enqueue_script('jude-bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), _S_VERSION, true);
 	wp_enqueue_script('jude-scrolla', get_template_directory_uri() . '/js/jquery.scrolla.min.js', array(), _S_VERSION, true);
 	wp_enqueue_script('jude-script', get_template_directory_uri() . '/js/script.js', array(), _S_VERSION, true);
@@ -240,7 +240,8 @@ function artists_category()
 }
 add_action('init', 'artists_category');
 
-function excerpt($limit) {
+function excerpt($limit)
+{
 	$excerpt = explode(' ', get_the_excerpt(), $limit);
 
 	if (count($excerpt) >= $limit) {
@@ -255,31 +256,32 @@ function excerpt($limit) {
 	return $excerpt;
 }
 
-function content($limit) {
-  $content = explode(' ', get_the_content(), $limit);
+function content($limit)
+{
+	$content = explode(' ', get_the_content(), $limit);
 
-  if (count($content) >= $limit) {
-	  array_pop($content);
-	  $content = implode(" ", $content) . '...';
-  } else {
-	  $content = implode(" ", $content);
-  }
+	if (count($content) >= $limit) {
+		array_pop($content);
+		$content = implode(" ", $content) . '...';
+	} else {
+		$content = implode(" ", $content);
+	}
 
-  $content = preg_replace('/\[.+\]/','', $content);
-  $content = apply_filters('the_content', $content); 
-  $content = str_replace(']]>', ']]&gt;', $content);
+	$content = preg_replace('/\[.+\]/', '', $content);
+	$content = apply_filters('the_content', $content);
+	$content = str_replace(']]>', ']]&gt;', $content);
 
-  return $content;
+	return $content;
 }
 // Option page
 if (function_exists('acf_add_options_page')) {
-    $parent = acf_add_options_page(array(
-        'page_title' => 'Site Settings',
-        'menu_title' => 'Site Settings',
-        'menu_slug' => 'theme-general-settings',
-        'capability' => 'edit_posts',
-        'redirect' => false
-    ));
+	$parent = acf_add_options_page(array(
+		'page_title' => 'Site Settings',
+		'menu_title' => 'Site Settings',
+		'menu_slug' => 'theme-general-settings',
+		'capability' => 'edit_posts',
+		'redirect' => false
+	));
 	// Add sub page.
 	$home_settings = acf_add_options_sub_page(array(
 		'page_title'  => __('Hero Scroll Images'),
@@ -288,12 +290,13 @@ if (function_exists('acf_add_options_page')) {
 	));
 }
 
-add_action( 'init', 'my_book_cpt' );
-function my_book_cpt() {
-    $args = array(
-      'public'       => true,
-      'show_in_rest' => true,
-      'label'        => 'Artist'
-    );
-    register_post_type( 'artists', $args );
+add_action('init', 'my_book_cpt');
+function my_book_cpt()
+{
+	$args = array(
+		'public'       => true,
+		'show_in_rest' => true,
+		'label'        => 'Artist'
+	);
+	register_post_type('artists', $args);
 }

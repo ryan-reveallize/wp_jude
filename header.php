@@ -20,70 +20,80 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-    <style>
-    .contact-us .top-section{
-    background:url(../wp-content/themes/jude/assets/images/contact-back.png);
-    background-size:contain;    background-repeat: no-repeat;
-    background-position:top right;
-    }
-    @media screen and (min-width: 768px){
-.main-navigation .nav-wrapper {
- 
-    width: 100vh;
-    justify-content: center;
-}
-}
-#cursor {
-  opacity: 0;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: #fff;
-  border: 0;
-  position: fixed;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  transform-origin: center;
-  transition: width 0.15s cubic-bezier(0, 1.07, 1, 2.05),
-    height 0.15s cubic-bezier(0, 1.07, 1, 2.05), border-radius 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, opacity 0.5s ease-in-out;
-  border-color: #212529 !important;
-}
-#cursor span {
-  color: #212529 !important;    font-size: 0.9rem !important;
-    line-height: 1.5rem;
-}
+	<style>
+		.contact-us .top-section {
+			background: url(../wp-content/themes/jude/assets/images/contact-back.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: top right;
+		}
 
-#cursor-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  /*transition: font-size .3s ease-in-out;*/
-}
+		@media screen and (min-width: 768px) {
+			.main-navigation .nav-wrapper {
 
-#cursor.expand {
-  height: 125px;
-  width: 125px;background:#fff;
-}
+				width: 100vh;
+				justify-content: center;
+			}
+		}
 
-#cursor.expand #cursor-text {
-  font-size: 1.25rem;
-}
+		#cursor {
+			opacity: 0;
+			width: 0;
+			height: 0;
+			border-radius: 50%;
+			background: #fff;
+			border: 0;
+			position: fixed;
+			left: 0;
+			top: 0;
+			pointer-events: none;
+			transform-origin: center;
+			transition: width 0.15s cubic-bezier(0, 1.07, 1, 2.05),
+				height 0.15s cubic-bezier(0, 1.07, 1, 2.05), border-radius 0.15s ease-in-out,
+				border-color 0.15s ease-in-out, opacity 0.5s ease-in-out;
+			border-color: #212529 !important;
+		}
 
-@keyframes underline {
-  from {
-    width: 0;
-  }
-  to {
-    width: 70%;
-  }
-}
-footer ul a{font-size:12px;}
+		#cursor span {
+			color: #212529 !important;
+			font-size: 0.9rem !important;
+			line-height: 1.5rem;
+		}
 
-</style>
+		#cursor-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			/*transition: font-size .3s ease-in-out;*/
+		}
+
+		#cursor.expand {
+			height: 125px;
+			width: 125px;
+			background: #fff;
+		}
+
+		#cursor.expand #cursor-text {
+			font-size: 1.25rem;
+		}
+
+		@keyframes underline {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 70%;
+			}
+		}
+
+		footer ul a {
+			font-size: 12px;
+		}
+	</style>
+	<?php /*?>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<script>
 		window.onload = function() {
@@ -98,7 +108,8 @@ footer ul a{font-size:12px;}
 		}
 	</script>
     
-    
+	<?php */ ?>
+
 </head>
 
 <body <?php body_class(); ?>>

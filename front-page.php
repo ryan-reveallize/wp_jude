@@ -17,9 +17,9 @@ get_header();
 ?>
 
 <style>
-.top-logo-container {
-    display: none;
-}
+    .top-logo-container {
+        display: none;
+    }
 </style>
 <main id="primary" class="site-main">
     <div class="hero-section pb-5">
@@ -33,8 +33,7 @@ get_header();
                         <div class="col-md-5 col-lg-4 order-md-1">
                             <div class="logo-container mb-4 mb-lg-5">
                                 <?php the_custom_logo(); ?>
-                                <img src="<?php bloginfo('template_directory') ?>/assets/logo-outline.png"
-                                    alt="Logo Outline" class="logo_outline" />
+                                <img src="<?php bloginfo('template_directory') ?>/assets/logo-outline.png" alt="Logo Outline" class="logo_outline" />
                             </div>
                             <div class="col-lg-10  animate__animated" data-animate="fadeIn">
                                 <h1 class="h3 font-ivy-bold mb-4 mb-lg-5">We support<br /> creative artists & give form
@@ -45,9 +44,7 @@ get_header();
                                     original.</p>
                             </div>
                             <div class="mb-5">
-                                <a href="<?php echo get_site_url(); ?>/artists/"
-                                    class="hoverable-expand btn-explore-artist" data-cursor-text="EXPLORE ARTISTS"
-                                    data-cursor-color="#4FC3F7"><small>EXPLORE ARTISTS</small></a>
+                                <a href="<?php echo get_site_url(); ?>/artists/" class="hoverable-expand btn-explore-artist" data-cursor-text="EXPLORE ARTISTS" data-cursor-color="#4FC3F7"><small>EXPLORE ARTISTS</small></a>
                             </div>
 
                             <div id="cursor">
