@@ -14,6 +14,7 @@
  */
 
 get_header('white-logo');
+$featured_image = get_the_post_thumbnail_url();
 ?>
 
 <?php
@@ -115,7 +116,7 @@ if ($the_query->have_posts()) {
 </style>
 
 <main id="primary" class="site-main pb-5 mb-5">
-    <div class="header-banner bg-img mb-5" data-background-image="<?= get_the_post_thumbnail_url(); ?>" style="background-size:cover;    background-position: left 40%;">
+    <div class="header-banner bg-img mb-5" data-background-image="<?php echo $featured_image; ?>" style="background-size:cover;    background-position: left 40%;">
         <div class="container z-2">
             <div class="row justify-content-center">
                 <div class="col-xl-10">
