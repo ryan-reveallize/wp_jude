@@ -21,7 +21,7 @@ get_header();
         display: none;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
 
         .site-main,
         .site-footer,
@@ -40,7 +40,7 @@ get_header();
                         <div class="col-md-7 col-lg-8 order-md-2 pe-md-0 position-relative">
                             <?php include('inc/home-hero-scroll.php') ?>
                         </div>
-                        <div class="col-md-5 col-lg-4 order-md-1">
+                        <div class="col-md-5 col-lg-3 order-md-1">
                             <div class="logo-container mb-4 mb-lg-5">
                                 <?php the_custom_logo(); ?>
                                 <img src="<?php bloginfo('template_directory') ?>/assets/logo-outline.png" alt="Logo Outline" class="logo_outline" />

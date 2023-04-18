@@ -330,11 +330,26 @@
 }
 
 .home-our-artist {
-    .row {
-        .h-artist-detail {
-            color: #ffffff;
-        }
+    .our-artist {
+        position: relative;
+        --border-color: #f1ddd4;
+        --artist-border-top: 0.3rem;
+        --artist-border-left: 0.3rem;
 
+        &::before {
+            content: "";
+            position: absolute;
+            border: 2px solid var(--border-color);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: 2;
+            top: var(--artist-border-top);
+            left: var(--artist-border-left);
+        }
+    }
+
+    .row {
         &:nth-child(3) {
             .h-artist-detail {
                 color: #1F2227;
@@ -395,55 +410,55 @@
 
 @media screen and (min-width: 768px) {
     .home-our-artist {
-        overflow: hidden;
-
-        .our-artist {
-            position: relative;
-            --border-color: #f1ddd4;
-            --artist-border-top: 1rem;
-            --artist-border-left: 1rem;
-
-            &::before {
-                content: "";
-                position: absolute;
-                border: 2px solid var(--border-color);
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                z-index: 2;
-                top: var(--artist-border-top);
-                left: var(--artist-border-left);
-            }
-        }
 
         .artist-mask {
+            object-fit: contain;
             position: absolute;
             top: 50%;
-            right: -4rem;
+            right: 0;
             transform: translateY(-50%);
             max-width: 70%;
         }
 
         .artist-odd {
-            .h-artist-detail {
-                //padding-right: 0;
+            .artist-mask {
+                object-position: right;
             }
+
+        }
+
+        .our-artist {
+            --artist-border-top: 0.5rem;
+            --artist-border-left: 0.5rem;
         }
 
         .artist-even {
             .our-artist {
-                --artist-border-left: -1rem;
-
-                &::before {
-                    top: var(--artist-border-top);
-                    left: var(--artist-border-left);
-                }
+                --artist-border-left: -0.5rem;
             }
 
             .artist-mask {
                 left: 0;
                 right: auto;
                 transform: translateY(-50%) scaleX(-1);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .home-our-artist {
+        .h-artist-detail {
+            color: #ffffff;
+        }
+
+        .our-artist {
+            --artist-border-top: 1rem;
+            --artist-border-left: 1rem;
+
+            &::before {
+                top: var(--artist-border-top);
+                left: var(--artist-border-left);
             }
         }
     }
