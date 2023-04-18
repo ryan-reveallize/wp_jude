@@ -83,7 +83,7 @@ foreach (get_field('gallery_options') as $gallery) {
                 <div class="col-lg-5 order-lg-1">
                     <div class="block-wrap mb-5">
                         <div class="about-content">
-                            <h1 class="artist-title font-ivy-thin display-2"><?php the_title(); ?></h1>
+                            <h1 class="artist-title display-2"><?php the_title(); ?></h1>
                             <p><?php echo get_the_content(); ?></p>
                             <div class="d-flex gap-4 mt-5 align-items-center ">
                                 <div class="btn-container">

@@ -22,7 +22,7 @@
 	<?php wp_head(); ?>
 	<style>
 		.contact-us .top-section {
-			background: url(../wp-content/themes/jude/assets/images/contact-back.png);
+			background: url(../wp-content/themes/jude/assets/images/contact-back.jpg);
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: top right;

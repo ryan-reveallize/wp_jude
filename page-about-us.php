@@ -30,9 +30,9 @@ get_header();
                             <?php include('inc/about-hero-scroll.php') ?>
                         </div>
                         <div class="col-md-5 order-md-1 about-wrapper">
-                            <h1 class="display-1 font-ivy-thin mb-4">ABOUT US</h1>
+                            <h1 class="display-1 mb-4">ABOUT US</h1>
                             <div class="col-lg-8  animate__animated" data-animate="fadeIn">
-                                <p class="h3 font-ivy-bold mb-4 mb-lg-5">We support <br /> creative artists & give<br /> form to vision.</p>
+                                <p class="h3 mb-4 mb-lg-5">We support <br /> creative artists & give<br /> form to vision.</p>
                                 <p class="mb-4 mb-lg-5">We do not take cues, we follow the guidance of inspiration and instinct. In a time of oversharing, JUDE embraces the understated and unspoken. We embrace anomalies and contradictions and believe in what is true, real, and original.</p>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ get_header();
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-5 col-md-6 offset-lg-1">
-                    <h3 class="mb-4 font-ivy-bold animate__animated" data-animate="fadeIn">Our Story</h3>
+                    <h3 class="mb-4 animate__animated" data-animate="fadeIn">Our Story</h3>
                     <div class="animate__animated" data-animate="fadeIn">
                         <?php the_content() ?>
                     </div>

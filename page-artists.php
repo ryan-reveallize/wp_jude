@@ -116,13 +116,13 @@ if ($the_query->have_posts()) {
 </style>
 
 <main id="primary" class="site-main pb-5 mb-5">
-    <div class="header-banner bg-img mb-5" data-background-image="<?php echo $featured_image; ?>" style="background-size:cover;    background-position: left 40%;">
+    <div class="header-banner bg-img mb-5" data-background-image="<?= $featured_image; ?>" style="background-size:cover;    background-position: left 40%;">
         <div class="container z-2">
             <div class="row justify-content-center">
                 <div class="col-xl-10">
                     <div class="row align-items-center artists-wrapper">
                         <div class="col-md-6 col-lg-8">
-                            <h1 class="display-1 font-ivy-thin mb-3 ">Our Artists</h1>
+                            <h1 class="display-1 mb-3 ">Our Artists</h1>
                         </div>
                         <div class="col-md-6 col-lg-4">
                             <div class="artists-filter" style="position:relative;z-index:9999;">

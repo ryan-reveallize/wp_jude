@@ -20,7 +20,7 @@ get_header();
     <div class="container">
         <div class="row top-section justify-content-center pb-5">
             <div class="about-wrapper">
-                <h1 class="mb-5 text-center display-1 font-ivy-thin"><?php echo get_field('title', false); ?></h1>
+                <h1 class="mb-5 text-center display-1"><?php echo get_field('title', false); ?></h1>
                 <p class="text-center mb-5"><?php echo get_field('subtitle', false, false); ?></p>
             </div>
             <div class="row justify-content-center">

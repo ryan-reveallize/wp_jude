@@ -20,80 +20,72 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-	<style>
-		.contact-us .top-section {
-			background: url(../wp-content/themes/jude/assets/images/contact-back.png);
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: top right;
-		}
+    <style>
+    .contact-us .top-section{
+    background:url(../wp-content/themes/jude/assets/images/contact-back.png);
+    background-size:contain;    background-repeat: no-repeat;
+    background-position:top right;
+    }
+    @media screen and (min-width: 768px){
+.main-navigation .nav-wrapper {
+ 
+    width: 100vh;
+    justify-content: center;
+}
+}
+#cursor {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: #fff;
+  border: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform-origin: center;
+  transition: width 0.15s cubic-bezier(0, 1.07, 1, 2.05),
+    height 0.15s cubic-bezier(0, 1.07, 1, 2.05), border-radius 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, opacity 0.5s ease-in-out;
+  border-color: #212529 !important;
+}
+#cursor span {
+  color: #212529 !important;    font-size: 0.9rem !important;
+    line-height: 1.5rem;
+}
 
-		@media screen and (min-width: 768px) {
-			.main-navigation .nav-wrapper {
+#cursor-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /*transition: font-size .3s ease-in-out;*/
+}
 
-				width: 100vh;
-				justify-content: center;
-			}
-		}
+#cursor.expand {
+  height: 125px;
+  width: 125px;background:#fff;
+}
 
-		#cursor {
-			opacity: 0;
-			width: 0;
-			height: 0;
-			border-radius: 50%;
-			background: #fff;
-			border: 0;
-			position: fixed;
-			left: 0;
-			top: 0;
-			pointer-events: none;
-			transform-origin: center;
-			transition: width 0.15s cubic-bezier(0, 1.07, 1, 2.05),
-				height 0.15s cubic-bezier(0, 1.07, 1, 2.05), border-radius 0.15s ease-in-out,
-				border-color 0.15s ease-in-out, opacity 0.5s ease-in-out;
-			border-color: #212529 !important;
-		}
+#cursor.expand #cursor-text {
+  font-size: 1.25rem;
+}
 
-		#cursor span {
-			color: #212529 !important;
-			font-size: 0.9rem !important;
-			line-height: 1.5rem;
-		}
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+footer ul a{font-size:12px;}
 
-		#cursor-text {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			text-align: center;
-			/*transition: font-size .3s ease-in-out;*/
-		}
-
-		#cursor.expand {
-			height: 125px;
-			width: 125px;
-			background: #fff;
-		}
-
-		#cursor.expand #cursor-text {
-			font-size: 1.25rem;
-		}
-
-		@keyframes underline {
-			from {
-				width: 0;
-			}
-
-			to {
-				width: 70%;
-			}
-		}
-
-		footer ul a {
-			font-size: 12px;
-		}
-	</style>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</style>
+	<?php /*?>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<script>
 		window.onload = function() {
 			var myOptions = {
@@ -106,8 +98,10 @@
 			var map = new google.maps.Map(document.getElementById("map"), myOptions);
 		}
 	</script>
-
-
+    
+	<?php */?>
+    
+    
 </head>
 
 <body <?php body_class(); ?>>
@@ -117,7 +111,6 @@
 			<nav id="site-navigation" class="main-navigation">
 				<div class="d-flex d-md-none justify-content-between align-items-center py-2 px-3">
 					<?php the_custom_logo(); ?>
-					</a>
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
 				</div>
 				<div class="nav-wrapper">
@@ -161,7 +154,7 @@
 		<div class="top-logo-container">
 			<div class="container">
 				<a class="navbar-brand logo" href="/">
-					<img src="<?php bloginfo('template_directory') ?>/assets/logo-white.png">
-				</a>
+    <img src="<?php bloginfo('template_directory') ?>/assets/logo-white.png" alt="logo">
+</a>
 			</div>
 		</div>

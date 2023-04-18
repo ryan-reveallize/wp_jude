@@ -20,6 +20,16 @@ get_header();
     .top-logo-container {
         display: none;
     }
+
+    @media screen and (min-width: 768px) {
+
+        .site-main,
+        .site-footer,
+        .top-logo-container {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
 </style>
 <main id="primary" class="site-main">
     <div class="hero-section pb-5">
@@ -36,9 +46,9 @@ get_header();
                                 <img src="<?php bloginfo('template_directory') ?>/assets/logo-outline.png" alt="Logo Outline" class="logo_outline" />
                             </div>
                             <div class="col-lg-10  animate__animated" data-animate="fadeIn">
-                                <h1 class="h3 font-ivy-bold mb-4 mb-lg-5">We support<br /> creative artists & give form
+                                <h1 class="h3 mb-4 mb-lg-5 font-glam-extended">We support<br /> creative artists & give form
                                     to vision.</h1>
-                                <p class="mb-4 mb-lg-5">We do not take cues, we follow the guidance of inspiration and
+                                <p class="mb-4 mb-lg-5 font-small">We do not take cues, we follow the guidance of inspiration and
                                     instinct. In a time of oversharing, JUDE embraces the understated and unspoken. We
                                     embrace anomalies and contradictions and believe in what is true, real, and
                                     original.</p>
@@ -57,11 +67,12 @@ get_header();
             </div>
         </div>
     </div>
-    <section class="our-artist-section pt-md-5" id="our-artist">
+    <section class="our-artist-section home-our-artist pt-md-5" id="our-artist">
+        <img src="<?php bloginfo('template_directory') ?>/assets/side-mask.svg" alt="" class="artist-side animate__animated" data-animate="fadeIn" />
         <div class="container">
-            <h3 class="font-ivy-bold mb-4 mb-lg-5">Our Artist</h3>
-            <?php include('inc/home-artist.php') ?>
+            <h3 class="mb-4 mb-lg-5 font-glam-extended">Our Artist</h3>
         </div>
+        <?php include('inc/home-artist.php') ?>
     </section>
     <section class="pb-5">
         <div class="container">

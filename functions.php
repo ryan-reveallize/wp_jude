@@ -144,6 +144,7 @@ add_action('widgets_init', 'jude_widgets_init');
 function jude_scripts()
 {
 	wp_enqueue_style('jude-style', get_stylesheet_uri(), array(), _S_VERSION);
+	wp_enqueue_style('jude-custom', get_template_directory_uri() . '/custom.css', array(), _S_VERSION);
 	wp_style_add_data('jude-style', 'rtl', 'replace');
 
 	wp_enqueue_script('jude-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
