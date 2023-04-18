@@ -55,7 +55,6 @@
 		}
 
 		#cursor span {
-			color: #212529 !important;
 			font-size: 0.9rem !important;
 			line-height: 1.5rem;
 		}
@@ -67,12 +66,6 @@
 			transform: translate(-50%, -50%);
 			text-align: center;
 			/*transition: font-size .3s ease-in-out;*/
-		}
-
-		#cursor.expand {
-			height: 125px;
-			width: 125px;
-			background: #fff;
 		}
 
 		#cursor.expand #cursor-text {

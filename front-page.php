@@ -21,6 +21,25 @@ get_header();
         display: none;
     }
 
+    .btn-explore-artist {
+        background: #f8f7f4;
+    }
+
+    .btn-explore-artist:hover {
+        color: #171d36;
+    }
+
+    #cursor.expand {
+        width: 148px;
+        height: 148px;
+        background-color: #C74B2F !important;
+
+    }
+
+    #cursor span {
+        color: #ffffff !important;
+    }
+
     @media screen and (min-width: 992px) {
 
         .site-main,
