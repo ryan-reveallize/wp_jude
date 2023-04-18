@@ -21,8 +21,8 @@
                 </div>
                 <?php if ($i % 2 == 0) : ?>
                     <div class="col-md-6 col-lg-6 col-xxl-6 h-artist-img py-md-5 mb-4 mb-md-0">
-                        <div class="our-artist">
-                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="img-fluid animate__animated" data-animate="fadeIn" />
+                        <div class="our-artist animate__animated" data-animate="fadeIn">
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="img-fluid" />
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-5 col-xxl-4 ps-xxl-5 h-artist-detail offset-lg-1">
@@ -32,8 +32,8 @@
                     </div>
                 <?php else : ?>
                     <div class="col-md-6 col-lg-6 col-xxl-6 h-artist-img py-md-5 mb-4 mb-md-0 order-md-2 offset-xxl-1">
-                        <div class="our-artist">
-                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="img-fluid animate__animated" data-animate="fadeIn" />
+                        <div class="our-artist animate__animated" data-animate="fadeIn">
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="img-fluid" />
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-5 col-xxl-4 ps-xxl-5 h-artist-detail order-md-1 offset-lg-1">

@@ -279,6 +279,19 @@
     display: swap;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+    color: #171D36;
+}
+
 .font-futura-book {
     font-family: 'futura-book', sans-serif;
 }
@@ -353,6 +366,10 @@
         &:nth-child(3) {
             .h-artist-detail {
                 color: #1F2227;
+
+                .display-3 {
+                    color: #171D36;
+                }
             }
         }
 
@@ -433,8 +450,12 @@
         }
 
         .artist-even {
+            overflow-x: hidden;
+
             .our-artist {
                 --artist-border-left: -0.5rem;
+                position: relative;
+                right: -3rem;
             }
 
             .artist-mask {
@@ -450,6 +471,11 @@
     .home-our-artist {
         .h-artist-detail {
             color: #ffffff;
+
+            .display-3 {
+                color: #ffffff;
+
+            }
         }
 
         .our-artist {

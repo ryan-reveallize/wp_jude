@@ -32,15 +32,15 @@ get_header();
     }
 </style>
 <main id="primary" class="site-main">
-    <div class="hero-section pb-5">
-        <div class="container-fluid pb-5">
+    <div class="hero-section ">
+        <div class="container-fluid">
             <div class="row justify-content-lg-end">
                 <div class="col-lg-11 hero-section-wrapper">
                     <div class="row align-items-start">
                         <div class="col-md-7 col-lg-8 order-md-2 pe-md-0 position-relative">
                             <?php include('inc/home-hero-scroll.php') ?>
                         </div>
-                        <div class="col-md-5 col-lg-3 order-md-1">
+                        <div class="col-md-5 col-lg-4 col-xxl-4 pe-xxl-5 order-md-1">
                             <div class="logo-container mb-4 mb-lg-5">
                                 <?php the_custom_logo(); ?>
                                 <img src="<?php bloginfo('template_directory') ?>/assets/logo-outline.png" alt="Logo Outline" class="logo_outline" />
@@ -67,10 +67,12 @@ get_header();
             </div>
         </div>
     </div>
-    <section class="our-artist-section home-our-artist pt-md-5" id="our-artist">
+    <section class="our-artist-section home-our-artist" id="our-artist">
         <img src="<?php bloginfo('template_directory') ?>/assets/side-mask.svg" alt="" class="artist-side animate__animated" data-animate="fadeIn" />
-        <div class="container">
-            <h3 class="mb-4 mb-lg-5 font-glam-extended">Our Artist</h3>
+        <div class="container-fluid">
+            <div class="col-lg-11 offset-lg-1">
+                <h3 class="mb-4 mb-lg-5 font-glam-extended">Our Artist</h3>
+            </div>
         </div>
         <?php include('inc/home-artist.php') ?>
     </section>
