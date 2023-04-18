@@ -13,7 +13,7 @@
  * @package Jude
  */
 
-get_header('white-logo');
+get_header();
 $featured_image = get_the_post_thumbnail_url();
 ?>
 
@@ -113,16 +113,40 @@ if ($the_query->have_posts()) {
         background-color: #1F2227;
         color: #FFFFFF;
     }
+
+    .header-mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-height: 90vh;
+        z-index: -1;
+    }
+
+    .header-banner:after {
+        background: none;
+    }
+
+    .artist-list {
+        position: relative;
+        z-index: 4;
+    }
+
+    @media screen and (max-width: 767px) {
+        .header-banner {
+            min-height: 300px;
+        }
+    }
 </style>
 
 <main id="primary" class="site-main pb-5 mb-5">
-    <div class="header-banner bg-img mb-5" data-background-image="<?= $featured_image; ?>" style="background-size:cover;    background-position: left 40%;">
+    <div class="header-banner bg-img mb-md-5">
+        <img src="<?php bloginfo('template_directory') ?>/assets/header-mask.png" alt="Header Mask" class="header-mask" />
         <div class="container z-2">
             <div class="row justify-content-center">
                 <div class="col-xl-10">
                     <div class="row align-items-center artists-wrapper">
                         <div class="col-md-6 col-lg-8">
-                            <h1 class="display-1 mb-3 ">Our Artists</h1>
+                            <h1 class="display-1 mb-3  font-glam-extended">Our Artists</h1>
                         </div>
                         <div class="col-md-6 col-lg-4">
                             <div class="artists-filter" style="position:relative;z-index:9999;">
@@ -151,11 +175,11 @@ if ($the_query->have_posts()) {
             </div>
         </div>
     </div>
-
-    <div class="container">
-        <div class="artists-result">
-
-            <?php echo do_shortcode('[searchandfilter id="37" show="results"]'); ?>
+    <div class="artist-list">
+        <div class="container">
+            <div class="artists-result">
+                <?php echo do_shortcode('[searchandfilter id="37" show="results"]'); ?>
+            </div>
         </div>
     </div>
 </main><!-- #main -->
