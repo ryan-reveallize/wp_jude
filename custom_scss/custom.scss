@@ -41,6 +41,9 @@
 
 .single-artist .img-wrap .linkwrap {
     position: relative;
+    display: flex;
+    padding: 0 1rem;
+    background-color: #f8f7f4;
 }
 
 .gallery-wrap .c-card {
@@ -118,6 +121,19 @@
     z-index: 2;
 }
 
+.btn-dark {
+    --bs-btn-bg: #171d37;
+    --bs-btn-border-color: #171d37;
+    --bs-btn-hover-bg: #424649;
+    --bs-btn-hover-border-color: #373b3e;
+    --bs-btn-active-bg: #4d5154;
+    --bs-btn-active-border-color: #373b3e;
+}
+
+.bg-navy-blue {
+    background-color: #171d37;
+}
+
 @media screen and (min-width: 768px) {
 
     .hero-images-wrapper .first-col::before {
@@ -173,7 +189,7 @@
 
     .artist-img .img-wrap {
         top: 0;
-        right: 100%;
+        right: auto;
         bottom: auto;
         left: auto;
     }
@@ -240,44 +256,6 @@
     background: #121C3B;
 }
 
-:root {
-    --bs-body-font-family: 'futura-book', sans-serif;
-}
-
-@font-face {
-    font-family: 'futura-book';
-    src: url('fonts/Futura Book.ttf');
-    font-style: normal;
-    display: swap;
-}
-
-@font-face {
-    font-family: 'Athiti';
-    src: url('fonts/Athiti-Regular.ttf');
-    font-style: normal;
-    display: swap;
-}
-
-@font-face {
-    font-family: 'Athiti-Medium';
-    src: url('fonts/Athiti-Medium.ttf');
-    font-style: normal;
-    display: swap;
-}
-
-@font-face {
-    font-family: 'GlamourAbsolute-Regular';
-    src: url('fonts/GlamourAbsolute_Regular.otf');
-    font-style: normal;
-    display: swap;
-}
-
-@font-face {
-    font-family: 'GlamourAbsolute-Extended';
-    src: url('fonts/GlamourAbsolute_Extended.otf');
-    font-style: normal;
-    display: swap;
-}
 
 h1,
 h2,
@@ -337,7 +315,7 @@ h5,
 .main-navigation {
     ul {
         a {
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 }

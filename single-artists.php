@@ -57,9 +57,18 @@ foreach (get_field('gallery_options') as $gallery) {
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async>
 </script>
 
-
+<style>
+    .header-mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 60vw;
+        z-index: -1;
+    }
+</style>
 
 <main id="primary" class="site-main mb-5 pb-5 single-artist">
+    <img src="<?php bloginfo('template_directory') ?>/assets/header-mask-2.png" alt="Header Mask" class="header-mask" />
     <div class="container">
         <div class="single-artist-fix">
             <div class="row align-items-center mb-5 pb-5">
@@ -83,7 +92,7 @@ foreach (get_field('gallery_options') as $gallery) {
                 <div class="col-lg-5 order-lg-1">
                     <div class="block-wrap mb-5">
                         <div class="about-content">
-                            <h1 class="artist-title display-2"><?php the_title(); ?></h1>
+                            <h1 class="artist-title display-2 font-glam-extended"><?php the_title(); ?></h1>
                             <p><?php echo get_the_content(); ?></p>
                             <div class="d-flex gap-4 mt-5 align-items-center ">
                                 <div class="btn-container">

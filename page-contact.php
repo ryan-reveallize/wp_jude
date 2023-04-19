@@ -27,6 +27,14 @@ get_header();
     .contact-us .top-section {
         background: none;
     }
+
+    .map-wrap p {
+        margin-bottom: 0;
+    }
+
+    .contact-us .mid-section .directions-wrap {
+        background-color: #171d37;
+    }
 </style>
 <main id="primary" class="site-main contact-us pb-5 mb-5 position-relative">
     <img src="<?php bloginfo('template_directory') ?>/assets/header-mask.png" alt="Header Mask" class="header-mask" />
@@ -87,7 +95,7 @@ get_header();
                 <div class="col-md-7 p-0 map-wrap">
                     <?php echo get_field('map', false); ?>
                 </div>
-                <div class="col-md-5 directions-wrap">
+                <div class="col-md-5 directions-wrap bg-navy-blue">
                     <div class="d-flex align-items-center justify-content-center h-100">
                         <div class="directions mt-5 mb-5 mt-lg-0 mb-lg-0">
                             <h4 class=" font-glam-extended">Where Are We Located?</h4>

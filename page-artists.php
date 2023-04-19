@@ -128,7 +128,6 @@ if ($the_query->have_posts()) {
 
     .artist-list {
         position: relative;
-        z-index: 4;
     }
 
     @media screen and (max-width: 767px) {
@@ -139,8 +138,8 @@ if ($the_query->have_posts()) {
 </style>
 
 <main id="primary" class="site-main pb-5 mb-5">
-    <div class="header-banner bg-img mb-md-5">
         <img src="<?php bloginfo('template_directory') ?>/assets/header-mask.png" alt="Header Mask" class="header-mask" />
+    <div class="header-banner bg-img mb-md-5">
         <div class="container z-2">
             <div class="row justify-content-center">
                 <div class="col-xl-10">
